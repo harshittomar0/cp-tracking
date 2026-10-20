@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>drowl@cp — competitive programming dashboard</title>
+<meta name="referrer" content="no-referrer">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=VT323&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#e8eae2; --panel:#f5f6f0; --panel2:#eceee6; --line:#c3c6b6; --ink:#1e2a1b; --dim:#5a6352;
+  --accent:#8a5600; --accent-ink:#ffffff; --err:#b3261e; --ok:#2e6b1f;
+  --cf:#1f63a8; --cc:#7546b8; --ac:#9a5a22;
+  --glow:0.0;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0e0b06; --panel:#15100a; --panel2:#1c160d; --line:#3a2e1a; --ink:#f0d9a8; --dim:#a38e63;
+    --accent:#ffb000; --accent-ink:#1a1206; --err:#ff7a66; --ok:#a8e07a;
+    --cf:#6fb6ff; --cc:#c79bff; --ac:#e7a26a; --glow:1;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0e0b06; --panel:#15100a; --panel2:#1c160d; --line:#3a2e1a; --ink:#f0d9a8; --dim:#a38e63;
+  --accent:#ffb000; --accent-ink:#1a1206; --err:#ff7a66; --ok:#a8e07a;
+  --cf:#6fb6ff; --cc:#c79bff; --ac:#e7a26a; --glow:1;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;line-height:1.55;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:calc(var(--glow) * .5);
+  background:repeating-linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,0) 2px,rgba(0,0,0,.18) 3px)}
+a{color:var(--accent)}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+img,svg{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding-top:12px;padding-bottom:0}
+.prompt{font-family:"VT323","IBM Plex Mono",monospace;font-size:28px;line-height:1;color:var(--accent);white-space:nowrap;
+  text-shadow:0 0 calc(var(--glow) * 10px) rgba(255,176,0,.45)}
+.prompt .u{color:var(--ok)}
+@media (max-width:480px){.prompt{font-size:22px}}
+.prompt .cursor{display:inline-block;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion: reduce){.prompt .cursor{animation:none}}
+.status{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--dim);font-size:12.5px;margin-left:auto;align-items:center}
+.status b{color:var(--ink);font-weight:600}
+.status .themebtn{font:inherit;font-size:12px;background:none;border:1px solid var(--line);color:var(--dim);padding:2px 8px;cursor:pointer}
+nav.tabs{flex-basis:100%;display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin:0 -4px}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{font:inherit;background:none;border:0;color:var(--dim);padding:10px 12px 9px;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent}
+nav.tabs button::before{content:"$ ";opacity:.5}
+nav.tabs button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent)}
+nav.tabs button .n{display:inline-block;min-width:18px;padding:0 4px;margin-left:6px;background:var(--accent);color:var(--accent-ink);font-size:11px;text-align:center}
+
+main{padding:20px 0 64px}
+section[hidden]{display:none}
+h2{font-size:15px;font-weight:600;margin:0 0 12px;color:var(--ink)}
+h2 .c{color:var(--dim);font-weight:400}
+h3{font-size:13.5px;font-weight:600;margin:0 0 8px}
+.dim{color:var(--dim)}
+.small{font-size:12.5px}
+.panel{background:var(--panel);border:1px solid var(--line);padding:16px;margin-bottom:16px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px;margin-bottom:16px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+
+/* platform cards */
+.card{background:var(--panel);border:1px solid var(--line);border-top:3px solid var(--p);padding:16px 16px 14px;display:flex;flex-direction:column;gap:10px}
+.card .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.card .pname{color:var(--p);font-weight:600}
+.card .handle{font-size:12.5px}
+.card .rating{display:flex;align-items:flex-end;gap:14px}
+.card .big{font-family:"VT323","IBM Plex Mono",monospace;font-size:76px;line-height:.78;color:var(--p);
+  text-shadow:0 0 calc(var(--glow) * 16px) currentColor}
+.card .tier{display:flex;flex-direction:column;gap:2px;padding-bottom:4px;font-size:12.5px}
+.card .tier .t{display:flex;align-items:center;gap:6px;color:var(--ink);font-weight:500;font-size:13.5px}
+.sw{display:inline-block;width:10px;height:10px;background:var(--sw)}
+.bar{height:6px;background:var(--line);position:relative}
+.bar>i{position:absolute;inset:0 auto 0 0;background:var(--p)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:3px 14px;font-size:12.5px;margin:0}
+.kv dt{color:var(--dim)}
+.kv dd{margin:0;text-align:right}
+.zone{font-size:12.5px;border:1px dashed var(--line);padding:6px 8px}
+.zone b{color:var(--p)}
+
+/* chart */
+.chart svg{display:block;width:100%;height:auto}
+.chart .axis{fill:var(--dim);font-size:12px;font-family:"IBM Plex Mono",monospace}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;color:var(--dim);margin-top:8px}
+.insight{border-left:3px solid var(--accent);padding:8px 12px;margin-top:12px;background:var(--panel2)}
+
+/* forms */
+label.f{display:flex;flex-direction:column;gap:4px;font-size:12.5px;color:var(--dim)}
+label.f>span b{color:var(--ink);font-weight:500}
+input[type=text],input[type=url],input[type=number],input[type=date],select,textarea{
+  font:inherit;font-size:13.5px;color:var(--ink);background:var(--bg);border:1px solid var(--line);padding:7px 9px;width:100%;border-radius:0}
+textarea{min-height:66px;resize:vertical;line-height:1.5}
+input::placeholder,textarea::placeholder{color:var(--dim);opacity:.75}
+.row{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-bottom:12px}
+.fieldset{margin:0 0 12px;padding:0;border:0}
+.fieldset>legend{font-size:12.5px;color:var(--dim);margin-bottom:6px;padding:0}
+.chip-list{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:inherit;font-size:12px;background:transparent;color:var(--ink);border:1px solid var(--line);padding:3px 9px;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chip-add{margin-top:6px;max-width:260px}
+.btn{font:inherit;font-size:13px;background:transparent;color:var(--accent);border:1px solid var(--accent);padding:7px 14px;cursor:pointer}
+.btn.primary{background:var(--accent);color:var(--accent-ink);font-weight:600}
+.btn.ghost{border-color:var(--line);color:var(--dim)}
+.btn.danger{border-color:var(--err);color:var(--err)}
+.btn.sm{padding:3px 9px;font-size:12px}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.check{display:flex;gap:8px;align-items:center;font-size:13px;cursor:pointer}
+.check input{accent-color:var(--accent);width:16px;height:16px}
+.notesgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;margin-bottom:12px}
+
+/* entries */
+.filters{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:8px;margin-bottom:12px}
+@media (max-width:760px){.filters{grid-template-columns:1fr 1fr}.filters .q{grid-column:1/-1}}
+.entry{border:1px solid var(--line);border-left:3px solid var(--p,var(--line));background:var(--panel);margin-bottom:8px}
+.entry>summary{list-style:none;cursor:pointer;padding:10px 12px;display:grid;grid-template-columns:auto auto 1fr auto;gap:4px 12px;align-items:baseline}
+.entry>summary::-webkit-details-marker{display:none}
+.entry>summary::before{content:"▸";color:var(--dim);grid-row:1}
+.entry[open]>summary::before{content:"▾"}
+.entry .pb{font-size:11px;color:var(--p);border:1px solid var(--p);padding:0 5px}
+.entry .nm{font-weight:500;min-width:0;overflow-wrap:anywhere}
+.entry .meta{font-size:12px;color:var(--dim);white-space:nowrap;display:flex;gap:12px}
+.entry .tags{grid-column:2/-1;display:flex;flex-wrap:wrap;gap:4px}
+.tag{font-size:11px;color:var(--dim);border:1px solid var(--line);padding:0 6px}
+.tag.m{color:var(--err);border-color:color-mix(in srgb,var(--err) 50%,transparent)}
+.entry .body{padding:4px 14px 14px 30px;display:grid;gap:10px}
+.note h4{margin:0 0 2px;font-size:12px;color:var(--dim);font-weight:500}
+.note p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.outcome{font-size:12px}
+.outcome.alone{color:var(--ok)}
+.outcome.editorial,.outcome.open{color:var(--err)}
+.empty{border:1px dashed var(--line);padding:22px;color:var(--dim);text-align:center}
+.empty b{color:var(--ink)}
+
+/* todo */
+.todo{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start;padding:9px 0;border-bottom:1px solid var(--line)}
+.todo:last-child{border-bottom:0}
+.todo .tx{overflow-wrap:anywhere}
+.todo.done .tx{text-decoration:line-through;color:var(--dim)}
+.pri{font-size:11px;padding:0 5px;border:1px solid var(--line);color:var(--dim)}
+.pri.high{color:var(--err);border-color:var(--err)}
+.pri.med{color:var(--accent);border-color:var(--accent)}
+
+/* insights */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:16px}
+.stat{background:var(--panel);padding:12px 14px}
+.stat .v{font-family:"VT323","IBM Plex Mono",monospace;font-size:42px;line-height:.9;color:var(--accent);text-shadow:0 0 calc(var(--glow) * 10px) rgba(255,176,0,.4)}
+.stat .l{font-size:12px;color:var(--dim);margin-top:4px}
+.hbar{display:grid;grid-template-columns:minmax(110px,180px) 1fr 34px;gap:8px;align-items:center;font-size:12.5px;margin-bottom:5px}
+.hbar .track{height:12px;background:var(--panel2);border:1px solid var(--line)}
+.hbar .track i{display:block;height:100%;background:var(--accent)}
+.hbar.m .track i{background:var(--err)}
+.hbar .c{text-align:right;color:var(--dim)}
+.heat-wrap{overflow-x:auto}
+.heat{display:grid;grid-template-rows:repeat(7,14px);grid-auto-flow:column;grid-auto-columns:14px;gap:3px;width:max-content}
+.heat i{display:block;background:var(--line);opacity:.55}
+.heat i.l1{background:var(--accent);opacity:.35}
+.heat i.l2{background:var(--accent);opacity:.6}
+.heat i.l3{background:var(--accent);opacity:.82}
+.heat i.l4{background:var(--accent);opacity:1}
+.heat i.today{outline:1px solid var(--ink)}
+.heat i.future{visibility:hidden}
+
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:8px 14px;font-size:13px;z-index:60;max-width:calc(100% - 32px)}
+.toast[hidden]{display:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:480px){.notesgrid{grid-template-columns:1fr}}
+@media (max-width:820px){.split{grid-template-columns:1fr}}
+.qitem{border:1px solid var(--line);border-left:3px solid var(--p,var(--accent));background:var(--panel);padding:12px;margin-bottom:8px;display:grid;gap:8px}
+.qitem .due{font-size:12px}
+.qitem .due.over{color:var(--err)}
+details.peek>summary{cursor:pointer;color:var(--dim);font-size:12.5px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="prompt" aria-label="drowl at cp"><span class="u">drowl@cp</span>:~$ <span id="cmd">./overview</span><span class="cursor" aria-hidden="true">▌</span></div>
+    <div class="status" id="status"></div>
+    <nav class="tabs" role="tablist" aria-label="Dashboard sections" id="tabs"></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="t-overview" role="tabpanel" aria-labelledby="tab-overview"></section>
+  <section id="t-log" role="tabpanel" aria-labelledby="tab-log" hidden></section>
+  <section id="t-resolve" role="tabpanel" aria-labelledby="tab-resolve" hidden></section>
+  <section id="t-todo" role="tabpanel" aria-labelledby="tab-todo" hidden></section>
+  <section id="t-review" role="tabpanel" aria-labelledby="tab-review" hidden></section>
+  <section id="t-insights" role="tabpanel" aria-labelledby="tab-insights" hidden></section>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- platform stats: data/stats.json, refreshed by the GitHub Action ---------- */
+/* history rows: [date, contest, newRating, delta, performance] */
+const SEED = {"updated":"2026-10-20T07:00:00Z","timezone":"Asia/Kolkata","cf":{"ok":true,"handle":"Squittal","rating":1335,"maxRating":1603,"rank":"pupil","maxRank":"expert","solved":531,"history":[],"daily":{},"tags":{},"ratings":{},"recent":[]},"cc":{"ok":true,"handle":"doctorowl","rating":1942,"max":2007,"stars":4,"global":1640,"country":1353,"contests":17,"solved":95,"history":[]},"ac":{"ok":true,"handle":"drowl","rating":693,"max":824,"rank":25906,"solved":null,"history":[["2023-09-09","ABC319",2,null,35],["2024-01-06","ABC335",7,5,52],["2024-03-09","ABC344",11,4,43],["2024-03-16","ABC345",62,51,846],["2024-03-23","ABC346",165,103,1027],["2024-03-24","ARC175",184,19,334],["2024-05-04","ABC352",231,47,604],["2024-05-11","ABC353",186,-45,35],["2024-05-18","ABC354",275,89,927],["2024-07-06","ABC361",336,61,758],["2024-07-13","ABC362",452,116,1053],["2024-12-07","ABC383",370,-82,47],["2025-02-01","ABC391",487,117,1101],["2025-02-15","ABC393",587,100,1145],["2025-03-08","ABC396",646,59,1014],["2025-03-22","ABC398",696,50,1024],["2025-03-29","ABC399",754,58,1131],["2025-04-05","ABC400",662,-92,37],["2025-05-10","ABC405",577,-85,38],["2025-08-09","ABC418",498,-79,44],["2025-08-16","ABC419",597,99,1191],["2025-08-30","ABC421",771,174,1662],["2025-09-14","ABC423",695,-76,74],["2025-10-11","ABC427",759,64,1193],["2025-12-20","ABC437",824,65,1267],["2026-01-31","ABC443",740,-84,44],["2026-02-07","ABC444",661,-79,52],["2026-03-07","ABC448",711,50,1074],["2026-06-13","ABC462",633,-78,46],["2026-07-25","ABC468",693,60,1116]],"daily":{},"recent":[]}};
+let SNAP = SEED;
+let STATS_ERR = false;
+async function loadStats(){
+  try {
+    const res = await fetch("data/stats.json?t=" + Date.now(), {cache:"no-store"});
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const d = await res.json();
+    if (!d || typeof d !== "object" || !d.cf || !d.cc || !d.ac) throw new Error("bad shape");
+    for (const k of ["cf","cc","ac"]){ if (!Array.isArray(d[k].history)) d[k].history = []; }
+    SNAP = d; STATS_ERR = false;
+  } catch(e){ STATS_ERR = true; }
+  renderAll();
+}
+const HANDLE_OK = /^[A-Za-z0-9_.\-]{1,40}$/;
+function profileUrl(k){
+  const hd = SNAP[k] && SNAP[k].handle; if (!hd || !HANDLE_OK.test(hd)) return null;
+  const e = encodeURIComponent(hd);
+  return k === "cf" ? "https://codeforces.com/profile/"+e : k === "cc" ? "https://www.codechef.com/users/"+e : "https://atcoder.jp/users/"+e;
+}
+
+const TOPICS = ["greedy","math","number theory","dp","binary search","two pointers","prefix sums","sorting",
+  "strings","graphs","dfs/bfs","shortest paths","trees","dsu","constructive","bitmasks","combinatorics",
+  "implementation","data structures","brute force","games","geometry","interactive"];
+const MISTAKES = ["off-by-one","wrong greedy","missed edge case","overflow","tle / complexity","misread statement",
+  "wrong observation","implementation bug","forgot reset between tests","wrong data structure","gave up too early","overcomplicated"];
+const OUTCOMES = [
+  {id:"alone",label:"Solved alone"},{id:"hint",label:"Solved after a hint"},
+  {id:"editorial",label:"Needed the editorial"},{id:"upsolve",label:"Upsolved after contest"},{id:"open",label:"Not solved yet"}];
+const OUT = Object.fromEntries(OUTCOMES.map(o=>[o.id,o.label]));
+const PLAT = {cf:"Codeforces",cc:"CodeChef",ac:"AtCoder",other:"Other"};
+const PSHORT = {cf:"CF",cc:"CC",ac:"AC",other:"··"};
+const RESOLVE_GAPS = [3,7,30];
+
+/* ---------- helpers ---------- */
+function h(tag, attrs, ...kids){
+  const e = document.createElement(tag);
+  if (attrs) for (const k in attrs){
+    const v = attrs[k];
+    if (v == null || v === false) continue;
+    if (k === "class") e.className = v;
+    else if (k === "text") e.textContent = v;
+    else if (k === "style") e.setAttribute("style", v);
+    else if (k.startsWith("on") && typeof v === "function") e.addEventListener(k.slice(2), v);
+    else e.setAttribute(k, v === true ? "" : String(v));
+  }
+  for (const c of kids.flat(Infinity)){
+    if (c == null || c === false) continue;
+    e.appendChild(typeof c === "object" ? c : document.createTextNode(String(c)));
+  }
+  return e;
+}
+const NS = "http://www.w3.org/2000/svg";
+function sv(tag, attrs, ...kids){
+  const e = document.createElementNS(NS, tag);
+  for (const k in (attrs||{})) e.setAttribute(k, attrs[k]);
+  for (const c of kids.flat()){ if (c == null) continue; e.appendChild(typeof c === "object" ? c : document.createTextNode(String(c))); }
+  return e;
+}
+function safeUrl(u){ try { const x = new URL(String(u).trim()); return (x.protocol === "https:" || x.protocol === "http:") ? x.href : null; } catch(e){ return null; } }
+function ds(d){ d = d || new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function pd(s){ const [y,m,d] = String(s).split("-").map(Number); return new Date(y, (m||1)-1, d||1); }
+function addDays(s,n){ const d = pd(s); d.setDate(d.getDate()+n); return ds(d); }
+function diffDays(a,b){ return Math.round((pd(b)-pd(a))/86400000); }
+function weekStart(s){ const d = pd(s); d.setDate(d.getDate()-((d.getDay()+6)%7)); return ds(d); }
+function mkId(p){ return p + Date.now().toString(36) + Math.random().toString(36).slice(2,8); }
+function cut(v,n){ return String(v == null ? "" : v).slice(0,n); }
+function fmtDate(s){ const d = pd(s); return d.toLocaleDateString(undefined,{month:"short",day:"numeric",year: d.getFullYear() === new Date().getFullYear() ? undefined : "numeric"}); }
+function plural(n,w){ return n + " " + w + (n === 1 ? "" : "s"); }
+function countBy(arr){ const m = new Map(); for (const x of arr) m.set(x,(m.get(x)||0)+1); return [...m.entries()].sort((a,b)=>b[1]-a[1]); }
+let toastT;
+function toast(msg){ const t = document.getElementById("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastT); toastT = setTimeout(()=>{ t.hidden = true; }, 2600); }
+
+/* ---------- storage: this browser (export a backup to move it) ---------- */
+const LKEY = "cpdash.v1";
+const TYPES = new Set(["problem","todo","review","meta"]);
+function validItem(x){ return x && typeof x === "object" && !Array.isArray(x) && typeof x.id === "string" && x.id.length < 80 && /^[\w-]+$/.test(x.id) && TYPES.has(x.type); }
+const Store = {
+  items: new Map(), subs: [],
+  on(fn){ this.subs.push(fn); },
+  emit(){ for (const f of this.subs) { try { f(); } catch(e){ console.error(e); } } },
+  all(type){ return [...this.items.values()].filter(x => x && x.type === type); },
+  get(id){ return this.items.get(id); },
+  init(){
+    try { const raw = localStorage.getItem(LKEY); const arr = raw ? JSON.parse(raw) : []; this.items = new Map((Array.isArray(arr)?arr:[]).filter(validItem).map(x=>[x.id,x])); }
+    catch(e){ this.items = new Map(); }
+    this.emit();
+  },
+  save(){ try { localStorage.setItem(LKEY, JSON.stringify([...this.items.values()])); } catch(e){ toast("Couldn’t save: browser storage is full or blocked. Export a backup."); } },
+  put(item){ item.updated = Date.now(); this.items.set(item.id, item); this.save(); this.emit(); },
+  remove(id){ this.items.delete(id); this.save(); this.emit(); },
+  exportJSON(){
+    const data = JSON.stringify({app:"cp-dashboard", version:1, exported:new Date().toISOString(), items:[...this.items.values()]});
+    const a = h("a",{href:URL.createObjectURL(new Blob([data],{type:"application/json"})), download:"cp-notes-"+ds()+".json"});
+    document.body.appendChild(a); a.click();
+    setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+  },
+  importJSON(text){
+    const d = JSON.parse(text);
+    const arr = Array.isArray(d) ? d : (d && Array.isArray(d.items) ? d.items : null);
+    if (!arr) throw new Error("not a backup");
+    let n = 0;
+    for (const x of arr){
+      if (!validItem(x)) continue;
+      const cur = this.items.get(x.id);
+      if (!cur || (+x.updated||0) > (+cur.updated||0)){ this.items.set(x.id, x); n++; }
+    }
+    this.save(); this.emit(); return n;
+  }
+};
+
+/* ---------- derived data ---------- */
+function problems(){ return Store.all("problem").sort((a,b)=> (b.date||"").localeCompare(a.date||"") || (b.created||0)-(a.created||0)); }
+function todos(){ return Store.all("todo"); }
+function reviews(){ return Store.all("review").sort((a,b)=> (b.week||"").localeCompare(a.week||"")); }
+function meta(){ return Store.get("meta") || {id:"meta", type:"meta", dailyGoal:1}; }
+function activity(){
+  const m = new Map(); const add = (d,n) => m.set(d,(m.get(d)||0)+n);
+  for (const k of ["cf","ac"]){ const d = (SNAP[k] && SNAP[k].daily) || {}; for (const day in d) add(day, +d[day] || 0); }
+  const fromPlatforms = new Set(m.keys());
+  for (const p of problems()){
+    if (p.outcome === "open") continue;
+    if (p.platform === "cc" || p.platform === "other" || !fromPlatforms.has(p.date)) add(p.date, 1);
+  }
+  return m;
+}
+function streaks(){
+  const act = activity(); const set = new Set([...act.keys()].filter(k=>act.get(k)>0)); const today = ds();
+  let cur = 0; let d = set.has(today) ? today : addDays(today,-1);
+  while (set.has(d)){ cur++; d = addDays(d,-1); }
+  const sorted = [...set].sort(); let best = 0, run = 0, prev = null;
+  for (const x of sorted){ run = (prev && diffDays(prev,x) === 1) ? run+1 : 1; best = Math.max(best,run); prev = x; }
+  return {cur, best};
+}
+function todayCount(){ return activity().get(ds()) || 0; }
+function dueResolves(){ const t = ds(); return problems().filter(p=>p.resolve && !p.resolve.done && p.resolve.due <= t); }
+function usedTags(field, presets){ const s = new Set(); for (const p of problems()) for (const t of (p[field]||[])) if (!presets.includes(t)) s.add(t); return [...s]; }
+
+/* tiers */
+const CF_T = [[0,"Newbie","#9a9a9a"],[1200,"Pupil","#77c977"],[1400,"Specialist","#3fbcae"],[1600,"Expert","#6f8cff"],[1900,"Candidate Master","#c06cff"],[2100,"Master","#ffae42"],[2300,"International Master","#ffae42"],[2400,"Grandmaster","#ff5a5a"],[3000,"Legendary Grandmaster","#ff5a5a"]];
+const CC_T = [[0,"1★","#8a8a8a"],[1400,"2★","#4caf50"],[1600,"3★","#3f8cff"],[1800,"4★","#9c6bd6"],[2000,"5★","#e0b000"],[2200,"6★","#ff8c1a"],[2500,"7★","#e53935"]];
+const AC_T = [[0,"Gray","#9a9a9a"],[400,"Brown","#a0622d"],[800,"Green","#3fa34d"],[1200,"Cyan","#2fbcd0"],[1600,"Blue","#4f6bff"],[2000,"Yellow","#d6c200"],[2400,"Orange","#ff8c1a"],[2800,"Red","#e53935"]];
+function tierOf(T,r){ let i = 0; for (let k=0;k<T.length;k++) if (r >= T[k][0]) i = k; return {cur:T[i], next:T[i+1]||null}; }
+function zone(r){ const lo = Math.round((r+100)/100)*100; return [lo, lo+200]; }
+
+/* ---------- tabs ---------- */
+const TABS = [["overview","overview"],["log","log"],["resolve","re-solve"],["todo","todo"],["review","review"],["insights","insights"]];
+let active = "overview";
+function buildTabs(){
+  const nav = document.getElementById("tabs");
+  nav.replaceChildren(...TABS.map(([id,label]) => {
+    const b = h("button",{role:"tab", id:"tab-"+id, "aria-controls":"t-"+id, "aria-selected": String(id===active), tabindex: id===active ? "0" : "-1",
+      onclick:()=>show(id)}, label);
+    if (id === "resolve"){ const n = dueResolves().length; if (n) b.appendChild(h("span",{class:"n","aria-label":n+" due"}, n)); }
+    return b;
+  }));
+  nav.onkeydown = e => {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    const i = TABS.findIndex(t=>t[0]===active); const j = (i + (e.key==="ArrowRight"?1:-1) + TABS.length) % TABS.length;
+    show(TABS[j][0]); document.getElementById("tab-"+TABS[j][0]).focus();
+  };
+}
+function show(id){
+  active = id;
+  for (const [t] of TABS) document.getElementById("t-"+t).hidden = t !== id;
+  document.getElementById("cmd").textContent = "./" + TABS.find(t=>t[0]===id)[1];
+  buildTabs();
+  window.scrollTo({top:0});
+}
+
+/* ---------- status line ---------- */
+function themeBtn(){
+  const root = document.documentElement;
+  const cur = root.getAttribute("data-theme") === "light" ? "light" : "dark";
+  return h("button",{class:"themebtn", type:"button", onclick:()=>{
+    const nx = cur === "dark" ? "light" : "dark"; root.setAttribute("data-theme", nx);
+    try { localStorage.setItem("cpdash.theme", nx); } catch(e){}
+    renderStatus();
+  }}, cur === "dark" ? "light theme" : "dark theme");
+}
+function ago(iso){
+  const t = Date.parse(iso); if (!isFinite(t)) return "unknown";
+  const m = Math.max(0, Math.round((Date.now()-t)/60000));
+  if (m < 60) return m+"m ago"; const hr = Math.round(m/60); if (hr < 48) return hr+"h ago"; return Math.round(hr/24)+"d ago";
+}
+function renderStatus(){
+  const st = streaks(); const goal = meta().dailyGoal || 1; const tc = todayCount();
+  const bad = ["cf","cc","ac"].filter(k => SNAP[k] && SNAP[k].ok === false);
+  document.getElementById("status").replaceChildren(
+    h("span",null,"today ", h("b",null, tc+"/"+goal)),
+    h("span",null,"streak ", h("b",null, st.cur+"d")),
+    h("span",{title:"Platform stats are refreshed by the GitHub Action"}, "stats ", h("b",null, STATS_ERR ? "built-in copy" : ago(SNAP.updated))),
+    bad.length ? h("span",{style:"color:var(--err)", title: bad.map(k=>PLAT[k]+": "+(SNAP[k].error||"unknown error")).join("\n")}, bad.map(k=>PSHORT[k]).join(" ")+" update failed") : null,
+    themeBtn()
+  );
+}
+
+/* ---------- overview ---------- */
+function platformCard(o){
+  const pct = o.next ? Math.max(0,Math.min(100, (o.rating - o.cur[0])/(o.next[0]-o.cur[0])*100)) : 100;
+  return h("article",{class:"card", style:"--p:var(--"+o.key+")"},
+    h("div",{class:"head"}, h("span",{class:"pname"}, PLAT[o.key]),
+      h("a",{class:"handle", href:o.url, target:"_blank", rel:"noopener noreferrer"}, o.handle)),
+    h("div",{class:"rating"},
+      h("div",{class:"big", "aria-label":"rating "+o.rating}, o.rating),
+      h("div",{class:"tier"},
+        h("span",{class:"t"}, h("i",{class:"sw", style:"--sw:"+o.cur[2]}), o.tierLabel || o.cur[1]),
+        h("span",{class:"dim"}, "peak " + o.max + (o.peakName ? " ("+o.peakName+")" : "")))),
+    o.next ? h("div",null,
+      h("div",{class:"bar", role:"img", "aria-label": Math.round(pct)+"% of the way to "+o.next[1]}, h("i",{style:"width:"+pct+"%"})),
+      h("div",{class:"small dim", style:"margin-top:4px"}, (o.next[0]-o.rating)+" to "+o.next[1]+" ("+o.next[0]+")")) : null,
+    h("dl",{class:"kv"}, o.rows.map(([k,v]) => [h("dt",null,k), h("dd",null,v)])),
+    h("div",{class:"zone"}, "Practice zone: ", h("b",null, o.zone), h("span",{class:"dim"}, " " + o.zoneNote))
+  );
+}
+function cap(x){ return String(x||"").replace(/\b\w/g, c => c.toUpperCase()); }
+function sumDays(daily, n){ const t = ds(); let s2 = 0; for (let i=0;i<n;i++) s2 += +((daily||{})[addDays(t,-i)]) || 0; return s2; }
+function hasDaily(x){ return x && x.daily && Object.keys(x.daily).length > 0; }
+function lastRow(H){ return H && H.length ? H[H.length-1] : null; }
+function signed(n){ return n == null ? "" : (n > 0 ? "+" : n < 0 ? "−" : "±") + Math.abs(n); }
+function num(x){ return x == null || x === "" || !isFinite(+x) ? "–" : (+x).toLocaleString(); }
+function cards(){
+  const cf = SNAP.cf, cc = SNAP.cc, ac = SNAP.ac;
+  const r = x => isFinite(+x) && x != null ? +x : 0;
+  const tcf = tierOf(CF_T,r(cf.rating)), tcc = tierOf(CC_T,r(cc.rating)), tac = tierOf(AC_T,r(ac.rating));
+  const zcf = zone(r(cf.rating)), zcc = zone(r(cc.rating)), zac = zone(r(ac.rating));
+  const lcf = lastRow(cf.history), lcc = lastRow(cc.history), lac = lastRow(ac.history);
+  return h("div",{class:"grid3"},
+    platformCard({key:"cf", handle:cf.handle, url:profileUrl("cf"), rating:r(cf.rating), max:num(cf.maxRating), peakName: cf.maxRank ? cap(cf.maxRank) : tierOf(CF_T,r(cf.maxRating)).cur[1],
+      cur:tcf.cur, next:tcf.next, tierLabel: cf.rank ? cap(cf.rank) : null,
+      rows:[["solved, all time", num(cf.solved)],
+            hasDaily(cf) ? ["solved, last 30 days", sumDays(cf.daily,30)] : null,
+            hasDaily(cf) ? ["solved, last 7 days", sumDays(cf.daily,7)] : null,
+            ["rated contests", cf.history.length || "–"],
+            lcf ? ["last contest", fmtDate(lcf[0])+(lcf[3]==null ? "" : " ("+signed(lcf[3])+")")] : null].filter(Boolean),
+      zone: zcf[0]+"–"+zcf[1], zoneNote:"problem rating"}),
+    platformCard({key:"cc", handle:cc.handle, url:profileUrl("cc"), rating:r(cc.rating), max:num(cc.max), peakName:tierOf(CC_T,r(cc.max)).cur[1],
+      cur:tcc.cur, next:tcc.next, tierLabel: cc.stars ? cc.stars+"★" : null,
+      rows:[["global rank",num(cc.global)],["country rank",num(cc.country)],["contests",num(cc.contests || cc.history.length)],
+            ["problems solved",num(cc.solved)], lcc ? ["last contest", fmtDate(lcc[0])+(lcc[3]==null ? "" : " ("+signed(lcc[3])+")")] : null].filter(Boolean),
+      zone: zcc[0]+"–"+zcc[1], zoneNote:"difficulty"}),
+    platformCard({key:"ac", handle:ac.handle, url:profileUrl("ac"), rating:r(ac.rating), max:num(ac.max), peakName:tierOf(AC_T,r(ac.max)).cur[1],
+      cur:tac.cur, next:tac.next,
+      rows:[ac.rank ? ["rank", num(ac.rank)] : null, ["rated contests", ac.history.length || "–"],
+            lac ? ["last competed", fmtDate(lac[0])+(lac[3]==null ? "" : " ("+signed(lac[3])+")")] : null,
+            ac.solved != null ? ["problems solved", num(ac.solved)] : null,
+            hasDaily(ac) ? ["solved, last 30 days", sumDays(ac.daily,30)] : null].filter(Boolean),
+      zone: zac[0]+"–"+zac[1], zoneNote:"difficulty (ABC C–D)"})
+  );
+}
+let chartKey = null;
+function chartRows(k){ const x = SNAP[k]; return x && Array.isArray(x.history) ? x.history.filter(r => Array.isArray(r) && /^\d{4}-\d\d-\d\d$/.test(r[0]) && isFinite(+r[2])) : []; }
+function isDrop(k, r){ return k === "ac" && r[4] != null && +r[4] < 100 && r[3] != null && +r[3] < 0; }
+function ratingChart(k){
+  const H = chartRows(k); const TT = k === "cf" ? CF_T : k === "cc" ? CC_T : AC_T;
+  if (H.length < 2) return h("div",{class:"empty"},"No rating history for "+PLAT[k]+" yet. It appears after the next stats update.");
+  const W = 600, Hh = 250, L = 44, R = 12, T = 12, B = 30;
+  const vals = H.map(r => +r[2]);
+  const lo = Math.max(0, Math.floor((Math.min(...vals)-100)/200)*200), hi = Math.ceil((Math.max(...vals)+100)/200)*200;
+  const t0 = pd(H[0][0]).getTime(); let t1 = pd(H[H.length-1][0]).getTime(); if (t1 === t0) t1 = t0 + 86400000;
+  const x = d => L + (pd(d).getTime()-t0)/(t1-t0)*(W-L-R);
+  const y = v => T + (1 - (v-lo)/(hi-lo))*(Hh-T-B);
+  const last = H[H.length-1];
+  const g = sv("svg",{viewBox:"0 0 "+W+" "+Hh, role:"img", "aria-label":PLAT[k]+" rating history over "+H.length+" contests, now "+last[2]+", peak "+Math.max(...vals)+"."});
+  for (let i=0;i<TT.length;i++){
+    const a = Math.max(TT[i][0], lo), b = Math.min(TT[i+1] ? TT[i+1][0] : Infinity, hi);
+    if (b <= a) continue;
+    g.appendChild(sv("rect",{x:L, y:y(b), width:W-L-R, height:y(a)-y(b), fill:TT[i][2], opacity:"0.1"}));
+    if (y(a)-y(b) > 18) g.appendChild(sv("text",{x:W-R-4, y:y(b)+14, "text-anchor":"end", class:"axis"}, TT[i][1]));
+  }
+  const step = (hi-lo) <= 800 ? 200 : 400;
+  for (let v = lo; v <= hi; v += step){
+    g.appendChild(sv("line",{x1:L, x2:W-R, y1:y(v), y2:y(v), stroke:"var(--line)", "stroke-width":"1"}));
+    g.appendChild(sv("text",{x:L-6, y:y(v)+4, "text-anchor":"end", class:"axis"}, v));
+  }
+  for (let yr = pd(H[0][0]).getFullYear()+1; yr <= pd(last[0]).getFullYear(); yr++){
+    const xx = x(yr+"-01-01");
+    g.appendChild(sv("line",{x1:xx,x2:xx,y1:T,y2:Hh-B, stroke:"var(--line)", "stroke-dasharray":"2 4"}));
+    g.appendChild(sv("text",{x:xx, y:Hh-10, "text-anchor":"middle", class:"axis"}, yr));
+  }
+  g.appendChild(sv("polyline",{points:H.map(r => x(r[0]).toFixed(1)+","+y(+r[2]).toFixed(1)).join(" "), fill:"none", stroke:"var(--"+k+")", "stroke-width":"2", "stroke-linejoin":"round"}));
+  for (const r of H){
+    const tip = String(r[1])+" ("+r[0]+"): rating "+r[2]+(r[3]==null ? "" : " ("+signed(+r[3])+")")+(r[4]==null ? "" : ", performance "+r[4]);
+    const node = isDrop(k,r)
+      ? sv("rect",{x:x(r[0])-4, y:y(+r[2])-4, width:8, height:8, fill:"var(--bg)", stroke:"var(--err)", "stroke-width":"2"})
+      : sv("circle",{cx:x(r[0]), cy:y(+r[2]), r:3.5, fill:"var(--"+k+")"});
+    node.appendChild(sv("title",null,tip)); g.appendChild(node);
+  }
+  return g;
+}
+function chartInsight(k){
+  const H = chartRows(k); if (H.length < 3) return null;
+  const last10 = H.slice(-10); const ds2 = last10.map(r => +r[3]).filter(isFinite);
+  const net = ds2.reduce((a,b)=>a+b,0);
+  const parts = ["Last "+plural(last10.length,"contest")+": net ", h("b",null, signed(net)),
+    ds2.length ? ", best "+signed(Math.max(...ds2))+", worst "+signed(Math.min(...ds2))+". " : ". "];
+  if (k === "ac"){
+    const since = addDays(ds(), -540);
+    const fin = H.filter(r => r[0] >= since && r[4] != null && +r[4] >= 100);
+    const drops = H.filter(r => isDrop(k,r)); const lost = drops.reduce((a,r)=>a + +r[3], 0);
+    if (fin.length) parts.push("When you finish a contest you perform at about ", h("b",null, String(Math.round(fin.reduce((a,r)=>a + +r[4],0)/fin.length))), " (last 18 months). ");
+    if (drops.length) parts.push(plural(drops.length,"contest")+" ended with near-zero performance and together cost ", h("b",null, signed(lost)), " rating. Entering only when you can stay the full 100 minutes protects your rating.");
+  }
+  return h("div",{class:"insight small"}, parts);
+}
+function chartPanel(){
+  const keys = ["cf","ac","cc"].filter(k => chartRows(k).length >= 2);
+  if (!chartKey || !keys.includes(chartKey)) chartKey = keys[0] || "ac";
+  return h("div",{class:"panel chart"},
+    h("div",{class:"actions", style:"justify-content:space-between;margin-bottom:10px"},
+      h("h2",{style:"margin:0"},"Rating history ", h("span",{class:"c"},"· "+PLAT[chartKey]+", "+plural(chartRows(chartKey).length,"rated contest"))),
+      h("div",{class:"chip-list", role:"group", "aria-label":"Choose platform"}, keys.map(k => h("button",{type:"button", class:"chip", "aria-pressed":String(k===chartKey), onclick:()=>{ chartKey = k; renderOverview(); }}, PSHORT[k])))),
+    ratingChart(chartKey),
+    chartKey === "ac" ? h("div",{class:"legend"},
+      h("span",null, h("i",{class:"sw", style:"--sw:var(--ac);border-radius:50%"})," contest"),
+      h("span",null, h("i",{class:"sw", style:"--sw:transparent;outline:2px solid var(--err);outline-offset:-2px"})," performance under 100")) : null,
+    chartInsight(chartKey));
+}
+function overviewToday(){
+  const m = meta(); const goal = m.dailyGoal || 1; const tc = todayCount();
+  const lastRev = reviews()[0];
+  const due = dueResolves();
+  const open = todos().filter(t=>!t.done).sort(todoSort).slice(0,4);
+  return h("div",{class:"panel"},
+    h("h2",null,"Today"),
+    h("div",{class:"actions", style:"margin-bottom:12px"},
+      h("span",null, tc >= goal ? "Daily goal done: " : "Daily goal: ", h("b",null, tc+" of "+goal)),
+      h("span",{class:"dim small"},"Set goal"),
+      [1,2,3].map(n => h("button",{type:"button", class:"chip", "aria-pressed":String(goal===n), onclick:()=>{ Store.put(Object.assign({}, m, {dailyGoal:n})); }}, n))
+    ),
+    lastRev && lastRev.focus ? h("p",{style:"margin:0 0 12px"}, h("span",{class:"dim"},"This week’s focus: "), lastRev.focus) : null,
+    h("div",{class:"actions", style:"margin-bottom:12px"},
+      h("button",{class:"btn primary", type:"button", onclick:()=>{ show("log"); setTimeout(()=>document.getElementById("f-name").focus(),0); }}, "Log a problem"),
+      due.length ? h("button",{class:"btn", type:"button", onclick:()=>show("resolve")}, plural(due.length,"re-solve")+" due") : null,
+      h("button",{class:"btn ghost", type:"button", onclick:()=>show("review")}, "Weekly review")),
+    open.length ? h("div",null, h("h3",null,"Next on your list"), open.map(todoRow)) :
+      h("p",{class:"dim small", style:"margin:0"},"Your to-do list is empty. Add the next contest or topic you want to tackle in todo.")
+  );
+}
+function renderOverview(){
+  document.getElementById("t-overview").replaceChildren(
+    h("p",{class:"dim small", style:"margin:0 0 12px"}, STATS_ERR
+      ? "Showing the built-in snapshot because data/stats.json couldn’t be loaded. Open the page from GitHub Pages, not as a local file."
+      : "Platform stats update automatically every 6 hours. Last update: "+ago(SNAP.updated)+"."),
+    cards(),
+    h("div",{class:"split"}, chartPanel(), overviewToday())
+  );
+}
+
+/* ---------- chip group ---------- */
+function chipGroup(presets, opts){
+  opts = opts || {};
+  const multi = opts.multi !== false;
+  let sel = new Set(); let extra = [];
+  const list = h("div",{class:"chip-list"});
+  const wrap = h("div",null, list);
+  const val = p => typeof p === "string" ? p : p.id;
+  const lab = p => typeof p === "string" ? p : p.label;
+  let input = null;
+  if (opts.custom){
+    input = h("input",{type:"text", class:"chip-add", maxlength:"40", placeholder:"add your own, then Enter", "aria-label":"Add a custom "+(opts.label||"tag")});
+    input.addEventListener("keydown", e => {
+      if (e.key !== "Enter") return; e.preventDefault();
+      const v = input.value.trim().toLowerCase().slice(0,40); if (!v) return;
+      if (!presets.some(p=>val(p)===v) && !extra.includes(v)) extra.push(v);
+      sel.add(v); input.value = ""; draw();
+    });
+    wrap.appendChild(input);
+  }
+  function draw(){
+    list.replaceChildren(...[...presets, ...extra].map(p => {
+      const v = val(p), on = sel.has(v);
+      return h("button",{type:"button", class:"chip", "aria-pressed":String(on), onclick:()=>{
+        if (multi){ if (on) sel.delete(v); else sel.add(v); } else sel = new Set([v]);
+        draw(); if (opts.onchange) opts.onchange(api.get());
+      }}, lab(p));
+    }));
+  }
+  const api = {
+    el: wrap,
+    get(){ return multi ? [...sel] : ([...sel][0] || null); },
+    set(v){ sel = new Set(multi ? (v||[]) : (v ? [v] : [])); for (const x of sel) if (!presets.some(p=>val(p)===x) && !extra.includes(x)) extra.push(x); draw(); },
+    addExtras(arr){ for (const x of arr) if (!presets.some(p=>val(p)===x) && !extra.includes(x)) extra.push(x); draw(); }
+  };
+  draw(); return api;
+}
+
+/* ---------- log ---------- */
+let editingId = null;
+const F = {};
+function field(label, input, hint){ return h("label",{class:"f"}, h("span",null, h("b",null,label), hint ? " "+hint : ""), input); }
+function buildLog(){
+  const el = document.getElementById("t-log");
+  F.platform = h("select",{id:"f-plat"}, Object.entries(PLAT).map(([k,v])=>h("option",{value:k},v)));
+  F.name = h("input",{type:"text", id:"f-name", maxlength:"140", placeholder:"e.g. 1985C Good Prefixes", required:true});
+  F.url = h("input",{type:"url", maxlength:"400", placeholder:"https://codeforces.com/problemset/problem/…"});
+  F.diff = h("input",{type:"text", maxlength:"20", placeholder:"1400 or ABC D"});
+  F.date = h("input",{type:"date", value:ds()});
+  F.minutes = h("input",{type:"number", min:"0", max:"1000", step:"1", placeholder:"45"});
+  F.outcome = chipGroup(OUTCOMES, {multi:false, onchange:v=>{ if (["hint","editorial","upsolve","open"].includes(v)) F.queue.checked = true; }});
+  F.topics = chipGroup(TOPICS, {custom:true, label:"topic"});
+  F.mistakes = chipGroup(MISTAKES, {custom:true, label:"mistake type"});
+  const ta = (ph) => h("textarea",{maxlength:"4000", placeholder:ph});
+  F.stuck = ta("The exact moment I stopped making progress, and what I was thinking then");
+  F.approach = ta("What I tried first, and why it failed or worked");
+  F.ideal = ta("The question I should have asked myself, or the observation that unlocks it");
+  F.learned = ta("The key idea or technique, written so future me can reuse it");
+  F.confidence = chipGroup([{id:"1",label:"1 lost"},{id:"2",label:"2"},{id:"3",label:"3"},{id:"4",label:"4"},{id:"5",label:"5 easy"}], {multi:false});
+  F.queue = h("input",{type:"checkbox"});
+  F.save = h("button",{class:"btn primary", type:"submit"}, "Save entry");
+  F.cancel = h("button",{class:"btn ghost", type:"button", hidden:true, onclick:resetForm}, "Cancel edit");
+  F.title = h("h2",null,"Log a problem");
+  const form = h("form",{class:"panel", novalidate:true, onsubmit:e=>{ e.preventDefault(); saveEntry(); }},
+    F.title,
+    h("div",{class:"row"}, field("Platform",F.platform), h("div",{style:"grid-column:span 2"}, field("Problem",F.name)), field("Difficulty",F.diff)),
+    h("div",{class:"row"}, h("div",{style:"grid-column:span 2"}, field("Link",F.url,"(optional)")), field("Date",F.date), field("Minutes spent",F.minutes)),
+    h("fieldset",{class:"fieldset"}, h("legend",null,"Outcome"), F.outcome.el),
+    h("fieldset",{class:"fieldset"}, h("legend",null,"Topics"), F.topics.el),
+    h("fieldset",{class:"fieldset"}, h("legend",null,"Mistake types ", h("span",{class:"dim"},"(what went wrong on the way)")), F.mistakes.el),
+    h("h3",{style:"margin-top:4px"},"Metacognition"),
+    h("div",{class:"notesgrid"},
+      field("Where did I get stuck?", F.stuck),
+      field("First approach", F.approach),
+      field("What should my thinking have been?", F.ideal),
+      field("What I learned", F.learned)),
+    h("fieldset",{class:"fieldset"}, h("legend",null,"Could I solve a similar problem tomorrow?"), F.confidence.el),
+    h("label",{class:"check", style:"margin-bottom:14px"}, F.queue, "Add to re-solve queue (again in 3, 7 and 30 days)"),
+    h("div",{class:"actions"}, F.save, F.cancel)
+  );
+  F.list = h("div");
+  F.q = h("input",{type:"text", placeholder:"Search names and notes", "aria-label":"Search entries", oninput:renderLogList});
+  F.fp = h("select",{"aria-label":"Filter by platform", onchange:renderLogList}, h("option",{value:""},"All platforms"), Object.entries(PLAT).map(([k,v])=>h("option",{value:k},v)));
+  F.ft = h("select",{"aria-label":"Filter by topic", onchange:renderLogList});
+  F.fm = h("select",{"aria-label":"Filter by mistake type", onchange:renderLogList});
+  F.fo = h("select",{"aria-label":"Filter by outcome", onchange:renderLogList}, h("option",{value:""},"All outcomes"), OUTCOMES.map(o=>h("option",{value:o.id},o.label)));
+  F.count = h("span",{class:"c"});
+  F.recent = h("div");
+  el.replaceChildren(F.recent, form,
+    h("div",{class:"panel"}, h("h2",null,"Problem log ", F.count),
+      h("div",{class:"filters"}, h("div",{class:"q"},F.q), F.fp, F.ft, F.fm, F.fo), F.list));
+}
+function fillSelect(sel, first, opts){
+  const cur = sel.value;
+  sel.replaceChildren(h("option",{value:""},first), opts.map(o=>h("option",{value:o},o)));
+  sel.value = opts.includes(cur) ? cur : "";
+}
+function resetForm(){
+  editingId = null;
+  F.platform.value = "cf"; F.name.value = ""; F.url.value = ""; F.diff.value = ""; F.date.value = ds(); F.minutes.value = "";
+  F.outcome.set("alone"); F.topics.set([]); F.mistakes.set([]); F.confidence.set(null);
+  for (const k of ["stuck","approach","ideal","learned"]) F[k].value = "";
+  F.queue.checked = false; F.save.textContent = "Save entry"; F.cancel.hidden = true; F.title.textContent = "Log a problem";
+}
+function saveEntry(){
+  const name = F.name.value.trim();
+  if (!name){ F.name.focus(); toast("Add the problem name to save this entry."); return; }
+  const rawUrl = F.url.value.trim();
+  const url = rawUrl ? safeUrl(rawUrl) : "";
+  if (rawUrl && !url){ F.url.focus(); toast("Use a full link starting with https://"); return; }
+  const prev = editingId ? Store.get(editingId) : null;
+  const date = F.date.value || ds();
+  const min = parseInt(F.minutes.value,10);
+  let resolve = prev ? prev.resolve || null : null;
+  if (F.queue.checked && !resolve) resolve = {stage:0, due:addDays(date, RESOLVE_GAPS[0]), done:false};
+  if (!F.queue.checked) resolve = null;
+  const item = {
+    id: prev ? prev.id : mkId("p_"), type:"problem", created: prev ? prev.created : Date.now(),
+    platform: PLAT[F.platform.value] ? F.platform.value : "other", name: cut(name,140), url: url || "",
+    diff: cut(F.diff.value.trim(),20), date, minutes: isFinite(min) && min >= 0 ? Math.min(min,1000) : null,
+    outcome: F.outcome.get() || "alone", topics: F.topics.get().slice(0,20), mistakes: F.mistakes.get().slice(0,20),
+    stuck: cut(F.stuck.value,4000), approach: cut(F.approach.value,4000), ideal: cut(F.ideal.value,4000), learned: cut(F.learned.value,4000),
+    confidence: F.confidence.get(), resolve
+  };
+  Store.put(item);
+  toast(prev ? "Entry updated" : "Entry saved");
+  resetForm();
+}
+function editEntry(p){
+  editingId = p.id;
+  F.platform.value = p.platform || "other"; F.name.value = p.name || ""; F.url.value = p.url || ""; F.diff.value = p.diff || "";
+  F.date.value = p.date || ds(); F.minutes.value = p.minutes == null ? "" : p.minutes;
+  F.outcome.set(p.outcome || "alone"); F.topics.set(p.topics||[]); F.mistakes.set(p.mistakes||[]); F.confidence.set(p.confidence || null);
+  for (const k of ["stuck","approach","ideal","learned"]) F[k].value = p[k] || "";
+  F.queue.checked = !!p.resolve; F.save.textContent = "Save changes"; F.cancel.hidden = false; F.title.textContent = "Edit entry";
+  show("log"); F.name.focus();
+}
+function note(label, text){ return text ? h("div",{class:"note"}, h("h4",null,label), h("p",null,text)) : null; }
+function entryView(p, open){
+  const u = p.url ? safeUrl(p.url) : null;
+  let confirmDel = false;
+  const del = h("button",{class:"btn sm danger", type:"button", onclick:()=>{
+    if (!confirmDel){ confirmDel = true; del.textContent = "Confirm delete"; return; }
+    Store.remove(p.id); toast("Entry deleted");
+  }}, "Delete");
+  return h("details",{class:"entry", style:"--p:var(--"+(p.platform==="other"?"accent":p.platform)+")", open: open || null},
+    h("summary",null,
+      h("span",{class:"pb"}, PSHORT[p.platform]||"··"),
+      h("span",{class:"nm"}, p.name),
+      h("span",{class:"meta"}, [p.diff, p.minutes!=null ? p.minutes+" min" : null, fmtDate(p.date)].filter(Boolean).map(x=>h("span",null,x))),
+      h("span",{class:"tags"},
+        h("span",{class:"outcome "+p.outcome}, OUT[p.outcome]||""),
+        (p.topics||[]).map(t=>h("span",{class:"tag"},t)),
+        (p.mistakes||[]).map(t=>h("span",{class:"tag m"},t)))),
+    h("div",{class:"body"},
+      note("Where I got stuck", p.stuck), note("First approach", p.approach),
+      note("What my thinking should have been", p.ideal), note("What I learned", p.learned),
+      p.confidence ? h("div",{class:"small dim"},"Confidence on a similar problem: "+p.confidence+"/5") : null,
+      p.resolve ? h("div",{class:"small dim"}, p.resolve.done ? "Re-solve queue: finished" : "Next re-solve: "+fmtDate(p.resolve.due)) : null,
+      h("div",{class:"actions"},
+        u ? h("a",{href:u, target:"_blank", rel:"noopener noreferrer", class:"small"},"Open problem") : null,
+        h("button",{class:"btn sm", type:"button", onclick:()=>editEntry(p)},"Edit"), del))
+  );
+}
+const CF_TAG = {"constructive algorithms":"constructive","sortings":"sorting","dfs and similar":"dfs/bfs","number theory":"number theory","binary search":"binary search","two pointers":"two pointers","data structures":"data structures","brute force":"brute force","shortest paths":"shortest paths"};
+function mapTag(t){ t = String(t||"").toLowerCase().slice(0,40); return CF_TAG[t] || t; }
+function recentSolves(){
+  const list = [];
+  for (const k of ["cf","ac"]) for (const r of ((SNAP[k] && SNAP[k].recent) || [])) if (r && r.name) list.push(Object.assign({}, r, {platform:k}));
+  return list.sort((a,b)=> String(b.date||"").localeCompare(String(a.date||""))).slice(0,12);
+}
+function prefill(r){
+  resetForm();
+  F.platform.value = r.platform; F.name.value = cut(r.name,140); F.url.value = r.url && safeUrl(r.url) ? r.url : "";
+  F.diff.value = r.rating ? String(r.rating) : ""; F.date.value = /^\d{4}-\d\d-\d\d$/.test(r.date||"") ? r.date : ds();
+  F.topics.set((r.tags||[]).map(mapTag).filter(Boolean).slice(0,10));
+  F.title.textContent = "Add notes: " + cut(r.name,80);
+  F.stuck.scrollIntoView({block:"center"}); F.stuck.focus();
+}
+function renderRecent(){
+  if (!F.recent) return;
+  const list = recentSolves();
+  if (!list.length){ F.recent.replaceChildren(); return; }
+  const logged = new Set(problems().map(p=>p.url).filter(Boolean));
+  F.recent.replaceChildren(h("div",{class:"panel"},
+    h("h2",null,"Recent accepted ", h("span",{class:"c"},"· add notes while it’s fresh")),
+    list.map(r => {
+      const u = r.url ? safeUrl(r.url) : null; const done = u && logged.has(u);
+      return h("div",{class:"todo"},
+        h("span",{class:"pri", style:"color:var(--"+r.platform+");border-color:var(--"+r.platform+")"}, PSHORT[r.platform]),
+        h("div",null,
+          h("div",{class:"tx"}, u ? h("a",{href:u, target:"_blank", rel:"noopener noreferrer"}, String(r.name)) : String(r.name)),
+          h("div",{class:"small dim"}, [r.date ? fmtDate(r.date) : null, r.rating ? String(r.rating) : null, (r.tags||[]).slice(0,4).map(mapTag).join(", ") || null].filter(Boolean).join("   "))),
+        done ? h("span",{class:"small dim"},"logged") : h("button",{class:"btn sm", type:"button", onclick:()=>prefill(r)},"Add notes"));
+    })));
+}
+function renderLogList(){
+  if (!F.list) return;
+  renderRecent();
+  F.topics.addExtras(usedTags("topics",TOPICS)); F.mistakes.addExtras(usedTags("mistakes",MISTAKES));
+  const all = problems();
+  const allTopics = [...new Set(all.flatMap(p=>p.topics||[]))].sort();
+  const allMist = [...new Set(all.flatMap(p=>p.mistakes||[]))].sort();
+  fillSelect(F.ft,"All topics",allTopics); fillSelect(F.fm,"All mistake types",allMist);
+  const q = F.q.value.trim().toLowerCase();
+  const list = all.filter(p =>
+    (!F.fp.value || p.platform === F.fp.value) && (!F.ft.value || (p.topics||[]).includes(F.ft.value)) &&
+    (!F.fm.value || (p.mistakes||[]).includes(F.fm.value)) && (!F.fo.value || p.outcome === F.fo.value) &&
+    (!q || [p.name,p.stuck,p.approach,p.ideal,p.learned,p.diff].join(" ").toLowerCase().includes(q)));
+  F.count.textContent = all.length ? "· "+(list.length===all.length ? plural(all.length,"entry").replace("entrys","entries") : list.length+" of "+all.length) : "";
+  if (!all.length){
+    F.list.replaceChildren(h("div",{class:"empty"}, h("b",null,"No entries yet."), h("br"),
+      "Log the next problem right after you get AC, while the stuck moment is still fresh."));
+    return;
+  }
+  F.list.replaceChildren(...(list.length ? list.map(p=>entryView(p,false)) : [h("div",{class:"empty"},"No entries match these filters.")]));
+}
+
+/* ---------- re-solve ---------- */
+function renderResolve(){
+  const el = document.getElementById("t-resolve");
+  const t = ds();
+  const q = problems().filter(p=>p.resolve && !p.resolve.done).sort((a,b)=>a.resolve.due.localeCompare(b.resolve.due));
+  const due = q.filter(p=>p.resolve.due <= t), later = q.filter(p=>p.resolve.due > t);
+  const item = p => {
+    const u = p.url ? safeUrl(p.url) : null; const st = p.resolve.stage; const late = diffDays(p.resolve.due, t);
+    return h("div",{class:"qitem", style:"--p:var(--"+(p.platform==="other"?"accent":p.platform)+")"},
+      h("div",{class:"actions", style:"justify-content:space-between"},
+        h("span",null, h("b",null,p.name), " ", h("span",{class:"dim small"}, PLAT[p.platform]+(p.diff?"  "+p.diff:""))),
+        h("span",{class:"due"+(late>0?" over":"")}, late>0 ? plural(late,"day")+" overdue" : late===0 ? "due today" : "due "+fmtDate(p.resolve.due))),
+      h("div",{class:"small dim"}, "Review "+(st+1)+" of "+RESOLVE_GAPS.length+"  ·  first time: "+(OUT[p.outcome]||"").toLowerCase()),
+      (p.learned||p.ideal) ? h("details",{class:"peek"}, h("summary",null,"Show my note (try it first)"),
+        note("What I learned", p.learned), note("What my thinking should have been", p.ideal)) : null,
+      h("div",{class:"actions"},
+        u ? h("a",{href:u, target:"_blank", rel:"noopener noreferrer", class:"small"},"Open problem") : null,
+        h("button",{class:"btn sm primary", type:"button", onclick:()=>{
+          const ns = st+1; const r = ns >= RESOLVE_GAPS.length ? {stage:ns, due:p.resolve.due, done:true} : {stage:ns, due:addDays(t,RESOLVE_GAPS[ns]), done:false};
+          Store.put(Object.assign({}, p, {resolve:r})); toast(r.done ? "Finished: this one is yours now" : "Next re-solve on "+fmtDate(r.due));
+        }}, "Solved it again"),
+        h("button",{class:"btn sm ghost", type:"button", onclick:()=>{
+          Store.put(Object.assign({}, p, {resolve:{stage:st, due:addDays(t,3), done:false}})); toast("Moved to "+fmtDate(addDays(t,3)));
+        }}, "Still stuck, retry in 3 days")));
+  };
+  el.replaceChildren(
+    h("div",{class:"panel"},
+      h("h2",null,"Re-solve queue ", h("span",{class:"c"},"· write the solution again without looking")),
+      h("p",{class:"dim small", style:"margin:0 0 12px"},"Problems you needed help on come back after 3, 7 and 30 days. Solving one from scratch three times is what moves it from “I read it” to “I own it”."),
+      due.length ? [h("h3",null,"Due now"), due.map(item)] :
+        h("div",{class:"empty"}, q.length ? "Nothing due today. Next one: "+fmtDate(later[0].resolve.due)+"." :
+          "The queue is empty. Problems you log as hint, editorial or upsolve land here automatically.")),
+    later.length ? h("div",{class:"panel"}, h("h3",null,"Coming up"), later.map(item)) : null
+  );
+}
+
+/* ---------- todo ---------- */
+const PRI = {high:0, med:1, low:2};
+function todoSort(a,b){ return (PRI[a.priority]??1)-(PRI[b.priority]??1) || (a.due||"9999").localeCompare(b.due||"9999") || (a.created||0)-(b.created||0); }
+function todoRow(t){
+  const u = t.url ? safeUrl(t.url) : null;
+  const cb = h("input",{type:"checkbox", "aria-label":"Mark done: "+t.text, checked: t.done || null, onchange:()=>Store.put(Object.assign({}, t, {done:cb.checked, doneAt: cb.checked ? Date.now() : null}))});
+  return h("div",{class:"todo"+(t.done?" done":"")},
+    h("label",{class:"check"}, cb),
+    h("div",null,
+      h("div",{class:"tx"}, u ? h("a",{href:u, target:"_blank", rel:"noopener noreferrer"}, t.text) : t.text),
+      h("div",{class:"small dim", style:"display:flex;gap:10px;flex-wrap:wrap;margin-top:2px"},
+        h("span",{class:"pri "+(t.priority||"med")}, t.priority||"med"), t.kind ? h("span",null,t.kind) : null,
+        t.platform && t.platform !== "other" ? h("span",null,PLAT[t.platform]) : null,
+        t.due ? h("span",{style: !t.done && t.due < ds() ? "color:var(--err)" : null}, "by "+fmtDate(t.due)) : null)),
+    h("button",{class:"btn sm ghost", type:"button", "aria-label":"Delete task: "+t.text, onclick:()=>Store.remove(t.id)}, "×"));
+}
+const TD = {};
+function buildTodo(){
+  const el = document.getElementById("t-todo");
+  TD.text = h("input",{type:"text", maxlength:"200", placeholder:"e.g. Upsolve ABC468 D, or 10 binary-search-on-answer problems"});
+  TD.kind = h("select",null, ["problem","topic","contest","upsolve","other"].map(k=>h("option",{value:k},k)));
+  TD.pri = h("select",null, h("option",{value:"high"},"high"), h("option",{value:"med", selected:true},"medium"), h("option",{value:"low"},"low"));
+  TD.plat = h("select",null, Object.entries(PLAT).map(([k,v])=>h("option",{value:k, selected: k==="other" || null},v)));
+  TD.url = h("input",{type:"url", maxlength:"400", placeholder:"https://… (optional)"});
+  TD.due = h("input",{type:"date"});
+  TD.list = h("div"); TD.done = h("div");
+  el.replaceChildren(
+    h("form",{class:"panel", onsubmit:e=>{ e.preventDefault(); addTodo(); }},
+      h("h2",null,"Add a task"),
+      h("div",{class:"row"}, h("div",{style:"grid-column:1/-1"}, field("Task",TD.text))),
+      h("div",{class:"row"}, field("Type",TD.kind), field("Priority",TD.pri), field("Platform",TD.plat), field("Due",TD.due,"(optional)")),
+      h("div",{class:"row"}, h("div",{style:"grid-column:1/-1"}, field("Link",TD.url,"(optional)"))),
+      h("div",{class:"actions"}, h("button",{class:"btn primary", type:"submit"},"Add task"))),
+    h("div",{class:"panel"}, h("h2",null,"Open"), TD.list),
+    TD.done);
+}
+function addTodo(){
+  const text = TD.text.value.trim();
+  if (!text){ TD.text.focus(); toast("Write the task first."); return; }
+  const raw = TD.url.value.trim(); const url = raw ? safeUrl(raw) : "";
+  if (raw && !url){ TD.url.focus(); toast("Use a full link starting with https://"); return; }
+  Store.put({id:mkId("t_"), type:"todo", created:Date.now(), text:cut(text,200), kind:TD.kind.value, priority: PRI[TD.pri.value]!=null ? TD.pri.value : "med",
+    platform: PLAT[TD.plat.value] ? TD.plat.value : "other", url: url||"", due: TD.due.value || null, done:false});
+  TD.text.value = ""; TD.url.value = ""; TD.due.value = ""; TD.text.focus(); toast("Task added");
+}
+function renderTodo(){
+  if (!TD.list) return;
+  const all = todos(); const open = all.filter(t=>!t.done).sort(todoSort); const done = all.filter(t=>t.done).sort((a,b)=>(b.doneAt||0)-(a.doneAt||0));
+  TD.list.replaceChildren(...(open.length ? open.map(todoRow) : [h("div",{class:"empty"},"Nothing open. Add a contest to enter, a topic to drill, or a problem to upsolve.")]));
+  TD.done.replaceChildren(done.length ? h("details",{class:"panel"}, h("summary",{style:"cursor:pointer"}, h("b",null,"Done "), h("span",{class:"dim"},"· "+done.length)), h("div",{style:"margin-top:8px"}, done.slice(0,100).map(todoRow))) : "");
+}
+
+/* ---------- weekly review ---------- */
+const RV = {};
+function weekStats(ws){
+  const we = addDays(ws,6);
+  const ps = problems().filter(p=>p.date >= ws && p.date <= we);
+  const by = Object.fromEntries(OUTCOMES.map(o=>[o.id,0])); for (const p of ps) by[p.outcome] = (by[p.outcome]||0)+1;
+  const mist = countBy(ps.flatMap(p=>p.mistakes||[]));
+  const topics = countBy(ps.flatMap(p=>p.topics||[]));
+  const mins = ps.reduce((s,p)=>s+(p.minutes||0),0);
+  const days = new Set(ps.filter(p=>p.outcome!=="open").map(p=>p.date)).size;
+  return {ps, by, mist, topics, mins, days};
+}
+function buildReview(){
+  const el = document.getElementById("t-review");
+  RV.stats = h("div");
+  RV.well = h("textarea",{maxlength:"2000", placeholder:"What worked: a habit, a contest, a problem you cracked"});
+  RV.trip = h("textarea",{maxlength:"2000", placeholder:"The pattern behind this week’s mistakes"});
+  RV.focus = h("input",{type:"text", maxlength:"200", placeholder:"One thing, e.g. “write edge cases before submitting”"});
+  RV.title = h("h2");
+  RV.past = h("div");
+  el.replaceChildren(
+    h("div",{class:"panel"}, RV.title, RV.stats,
+      h("form",{onsubmit:e=>{ e.preventDefault(); saveReview(); }},
+        h("div",{class:"notesgrid", style:"margin-top:12px"}, field("What went well?",RV.well), field("What kept tripping me up?",RV.trip)),
+        h("div",{style:"margin-bottom:12px"}, field("One focus for next week",RV.focus)),
+        h("div",{class:"actions"}, h("button",{class:"btn primary", type:"submit"},"Save review")))),
+    RV.past, backupPanel());
+}
+function backupPanel(){
+  const file = h("input",{type:"file", accept:"application/json,.json", class:"sr", id:"imp"});
+  file.addEventListener("change", async () => {
+    const f = file.files && file.files[0]; if (!f) return;
+    if (f.size > 5e6){ toast("That file is too large to be a notes backup."); file.value = ""; return; }
+    try { const n = Store.importJSON(await f.text()); toast("Imported "+plural(n,"item")); }
+    catch(e){ toast("Couldn’t read that file. Choose a backup exported from this dashboard."); }
+    file.value = "";
+  });
+  return h("div",{class:"panel"}, h("h2",null,"Backup"),
+    h("p",{class:"dim small", style:"margin:0 0 12px"},"Your notes are saved in this browser only. Export a backup now and then, and import it on another device or after clearing browser data."),
+    h("div",{class:"actions"},
+      h("button",{class:"btn", type:"button", onclick:()=>Store.exportJSON()},"Export notes"),
+      h("label",{class:"btn ghost", for:"imp", tabindex:"0", onkeydown:e=>{ if (e.key==="Enter"||e.key===" "){ e.preventDefault(); file.click(); } }},"Import notes"), file));
+}
+function saveReview(){
+  const ws = weekStart(ds()); const id = "r_"+ws; const prev = Store.get(id);
+  Store.put({id, type:"review", week:ws, created: prev ? prev.created : Date.now(),
+    well:cut(RV.well.value,2000), trip:cut(RV.trip.value,2000), focus:cut(RV.focus.value.trim(),200)});
+  toast("Review saved");
+}
+function renderReview(){
+  if (!RV.stats) return;
+  const ws = weekStart(ds()); const s = weekStats(ws); const mine = Store.get("r_"+ws);
+  RV.title.replaceChildren("Week of "+fmtDate(ws), h("span",{class:"c"}," · takes ten minutes"));
+  RV.stats.replaceChildren(
+    h("div",{class:"stats", style:"margin-bottom:0"},
+      [[s.ps.length,"problems logged"],[s.days+"/7","days practiced"],[s.by.alone||0,"solved alone"],[(s.by.hint||0)+(s.by.editorial||0),"needed help"],[s.mins ? Math.round(s.mins/6)/10+"h" : "0h","time logged"]]
+        .map(([v,l])=>h("div",{class:"stat"}, h("div",{class:"v"},String(v)), h("div",{class:"l"},l)))),
+    s.mist.length ? h("p",{class:"small", style:"margin:10px 0 0"}, h("span",{class:"dim"},"Most common mistake this week: "), h("b",null,s.mist[0][0]), " ("+s.mist[0][1]+"×)") : null);
+  if (document.activeElement !== RV.well && document.activeElement !== RV.trip && document.activeElement !== RV.focus && mine && !RV.loaded){
+    RV.well.value = mine.well||""; RV.trip.value = mine.trip||""; RV.focus.value = mine.focus||""; RV.loaded = true;
+  }
+  const past = reviews().filter(r=>r.week !== ws);
+  RV.past.replaceChildren(past.length ? h("div",{class:"panel"}, h("h2",null,"Past reviews"),
+    past.map(r => { const st = weekStats(r.week); return h("details",{class:"entry"},
+      h("summary",null, h("span"), h("span",{class:"nm"},"Week of "+fmtDate(r.week)), h("span",{class:"meta"}, plural(st.ps.length,"problem")), r.focus ? h("span",{class:"tags"}, h("span",{class:"tag"},"focus: "+r.focus)) : null),
+      h("div",{class:"body"}, note("What went well", r.well), note("What kept tripping me up", r.trip), note("Focus", r.focus))); })) : "");
+}
+
+/* ---------- insights ---------- */
+function hbars(rows, max, cls){
+  return rows.map(([k,v]) => h("div",{class:"hbar"+(cls?" "+cls:"")}, h("span",{style:"overflow-wrap:anywhere"},k),
+    h("span",{class:"track", role:"img", "aria-label":k+": "+v}, h("i",{style:"width:"+(v/max*100)+"%"})), h("span",{class:"c"},v)));
+}
+function heatmap(){
+  const counts = activity();
+  const t = ds(); const start = addDays(weekStart(t), -7*15);
+  const cells = [];
+  for (let i=0;i<16*7;i++){
+    const d = addDays(start,i); const c = counts.get(d)||0;
+    const lv = c===0?0:c===1?1:c===2?2:c===3?3:4;
+    cells.push(h("i",{class:(lv?"l"+lv:"")+(d===t?" today":"")+(d>t?" future":""), title: fmtDate(d)+": "+plural(c,"problem")}));
+  }
+  return h("div",{class:"heat-wrap"}, h("div",{class:"heat", role:"img", "aria-label":"Solves per day over the last 16 weeks"}, cells));
+}
+function renderInsights(){
+  const el = document.getElementById("t-insights");
+  const ps = problems(); const solved = ps.filter(p=>p.outcome!=="open");
+  const st = streaks();
+  const help = ps.filter(p=>["hint","editorial"].includes(p.outcome)).length;
+  const timed = ps.filter(p=>p.minutes!=null && p.minutes>0);
+  const avgMin = timed.length ? Math.round(timed.reduce((s,p)=>s+p.minutes,0)/timed.length) : null;
+  const zcf = zone(+SNAP.cf.rating||0);
+  const cfRecent = (SNAP.cf.recent||[]).filter(r=>r && isFinite(+r.rating) && r.rating);
+  const cfNum = cfRecent.length ? cfRecent.map(r=>({diff:String(r.rating)})) : ps.filter(p=>p.platform==="cf" && /^\d{3,4}$/.test(p.diff||""));
+  const inZone = cfNum.filter(p=>+p.diff>=zcf[0] && +p.diff<=zcf[1]).length;
+  const below = cfNum.filter(p=>+p.diff<zcf[0]).length;
+  const mist = countBy(ps.flatMap(p=>p.mistakes||[])).slice(0,8);
+  const top = countBy(solved.flatMap(p=>p.topics||[])).slice(0,12);
+  const usedT = new Set(solved.flatMap(p=>p.topics||[]));
+  const gaps = TOPICS.filter(t=>!usedT.has(t) && !["interactive","geometry","games"].includes(t));
+  const lowConf = countBy(ps.filter(p=>p.confidence && +p.confidence<=2).flatMap(p=>p.topics||[])).slice(0,5);
+  el.replaceChildren(
+    h("div",{class:"stats"},
+      [[ps.length,"problems logged"],[st.cur+"d","current streak"],[st.best+"d","longest streak"],
+       [ps.length ? Math.round(help/ps.length*100)+"%" : "–","needed a hint or editorial"],
+       [avgMin!=null ? avgMin+"m" : "–","average time per problem"],
+       [cfNum.length ? Math.round(inZone/cfNum.length*100)+"%" : "–",(cfRecent.length ? "of last "+cfRecent.length+" CF solves" : "CF solves")+" in "+zcf[0]+"–"+zcf[1]]]
+      .map(([v,l])=>h("div",{class:"stat"}, h("div",{class:"v"},String(v)), h("div",{class:"l"},l)))),
+    cfNum.length && below/cfNum.length > 0.5 ? h("div",{class:"insight small", style:"margin:-4px 0 16px"},
+      "Most of your recent Codeforces solves are below "+zcf[0]+". Problems in the "+zcf[0]+"–"+zcf[1]+" range are where rating growth comes from.") : null,
+    h("div",{class:"panel"}, h("h2",null,"Daily practice ", h("span",{class:"c"},"· last 16 weeks, platforms plus your log")), heatmap()),
+    ps.length ? h("div",{class:"grid2"},
+      h("div",{class:"panel"}, h("h2",null,"Your recurring mistakes"),
+        mist.length ? hbars(mist, mist[0][1], "m") : h("p",{class:"dim small", style:"margin:0"},"Tag mistakes when you log problems and patterns will show up here."),
+        mist.length ? h("p",{class:"small", style:"margin:10px 0 0"}, h("span",{class:"dim"},"Biggest lever right now: "), h("b",null,mist[0][0]), ". Make one checklist step for it and run it before every submit.") : null),
+      h("div",{class:"panel"}, h("h2",null,"Topics you’ve solved"),
+        top.length ? hbars(top, top[0][1]) : h("p",{class:"dim small", style:"margin:0"},"Tag topics on your entries to see coverage."),
+        gaps.length && top.length ? h("p",{class:"small", style:"margin:10px 0 0"}, h("span",{class:"dim"},"Not logged yet: "), gaps.slice(0,8).join(", ")) : null,
+        lowConf.length ? h("p",{class:"small", style:"margin:6px 0 0"}, h("span",{class:"dim"},"Low confidence in: "), lowConf.map(x=>x[0]).join(", ")) : null))
+      : h("div",{class:"empty"}, h("b",null,"Insights fill in as you log."), h("br"), "Five or six entries with mistake and topic tags are enough to see your first patterns."),
+    cfPanels()
+  );
+}
+
+function cfPanels(){
+  const tags = Object.entries(SNAP.cf.tags||{}).filter(([k,v])=>isFinite(+v)).map(([k,v])=>[mapTag(k),+v]).sort((a,b)=>b[1]-a[1]).slice(0,12);
+  const rts = Object.entries(SNAP.cf.ratings||{}).filter(([k,v])=>/^\d+$/.test(k) && isFinite(+v)).map(([k,v])=>[k,+v]).sort((a,b)=>+a[0]-+b[0]);
+  if (!tags.length && !rts.length) return null;
+  const maxR = Math.max(1,...rts.map(r=>r[1])); const maxT = Math.max(1,...tags.map(r=>r[1]));
+  return h("div",{class:"grid2", style:"margin-top:16px"},
+    tags.length ? h("div",{class:"panel"}, h("h2",null,"Codeforces solves by tag ", h("span",{class:"c"},"· all time")), hbars(tags, maxT)) : null,
+    rts.length ? h("div",{class:"panel"}, h("h2",null,"Codeforces solves by problem rating"), hbars(rts, maxR),
+      h("p",{class:"small dim", style:"margin:10px 0 0"},"Your practice zone is "+zone(+SNAP.cf.rating||0).join("–")+". Aim for most new solves to land there.")) : null);
+}
+
+/* ---------- boot ---------- */
+try { const th = localStorage.getItem("cpdash.theme"); if (th === "light" || th === "dark") document.documentElement.setAttribute("data-theme", th); } catch(e){}
+buildTabs(); buildLog(); resetForm(); buildTodo(); buildReview();
+function renderAll(){ renderStatus(); renderOverview(); renderLogList(); renderResolve(); renderTodo(); renderReview(); renderInsights(); buildTabs(); }
+Store.on(renderAll);
+Store.init();
+loadStats();
+})();
+</script>
+</body>
+</html>
