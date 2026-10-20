@@ -1,60 +1,872 @@
 {
- "updated": "2026-10-20T07:00:00Z",
+ "updated": "2026-10-20T04:48:41.941Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
+  "fetchedAt": "2026-10-20T04:48:47.246Z",
   "handle": "Squittal",
   "rating": 1335,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 531,
-  "history": [],
-  "daily": {},
-  "tags": {},
-  "ratings": {},
-  "recent": []
- },
- "cc": {
-  "ok": true,
-  "handle": "doctorowl",
-  "rating": 1942,
-  "max": 2007,
-  "stars": 4,
-  "global": 1640,
-  "country": 1353,
-  "contests": 17,
-  "solved": 95,
-  "history": []
+  "solved": 521,
+  "history": [
+   [
+    "2024-11-30",
+    "Rayan Programming Contest 2024 - Selection (Codeforces Round 989, Div. 1 + Div. 2)",
+    383,
+    383,
+    null
+   ],
+   [
+    "2024-12-05",
+    "Codeforces Round 991 (Div. 3)",
+    728,
+    345,
+    null
+   ],
+   [
+    "2024-12-08",
+    "Codeforces Round 992 (Div. 2)",
+    864,
+    136,
+    null
+   ],
+   [
+    "2024-12-20",
+    "Codeforces Round 994 (Div. 2)",
+    1056,
+    192,
+    null
+   ],
+   [
+    "2024-12-22",
+    "Codeforces Round 995 (Div. 3)",
+    1277,
+    221,
+    null
+   ],
+   [
+    "2025-01-17",
+    "Codeforces Round 997 (Div. 2)",
+    1192,
+    -85,
+    null
+   ],
+   [
+    "2025-01-19",
+    "Codeforces Round 998 (Div. 3)",
+    1082,
+    -110,
+    null
+   ],
+   [
+    "2025-01-26",
+    "Ethflow Round 1 (Codeforces Round 1001, Div. 1 + Div. 2)",
+    1156,
+    74,
+    null
+   ],
+   [
+    "2025-02-02",
+    "Codeforces Round 1002 (Div. 2)",
+    1181,
+    25,
+    null
+   ],
+   [
+    "2025-02-11",
+    "Codeforces Round 1004 (Div. 2)",
+    1340,
+    159,
+    null
+   ],
+   [
+    "2025-02-16",
+    "Codeforces Round 1005 (Div. 2)",
+    1283,
+    -57,
+    null
+   ],
+   [
+    "2025-02-27",
+    "Educational Codeforces Round 175 (Rated for Div. 2)",
+    1300,
+    17,
+    null
+   ],
+   [
+    "2025-04-03",
+    "Educational Codeforces Round 177 (Rated for Div. 2)",
+    1414,
+    114,
+    null
+   ],
+   [
+    "2025-04-08",
+    "Codeforces Round 1016 (Div. 3)",
+    1570,
+    156,
+    null
+   ],
+   [
+    "2025-07-17",
+    "Codeforces Round 1037 (Div. 3)",
+    1571,
+    1,
+    null
+   ],
+   [
+    "2025-07-22",
+    "Educational Codeforces Round 181 (Rated for Div. 2)",
+    1603,
+    32,
+    null
+   ],
+   [
+    "2025-08-24",
+    "Codeforces Round 1044 (Div. 2)",
+    1576,
+    -27,
+    null
+   ],
+   [
+    "2025-08-26",
+    "Codeforces Round 1045 (Div. 2)",
+    1555,
+    -21,
+    null
+   ],
+   [
+    "2025-09-09",
+    "Codeforces Round 1049 (Div. 2)",
+    1490,
+    -65,
+    null
+   ],
+   [
+    "2025-10-03",
+    "Squarepoint Challenge (Codeforces Round 1055, Div. 1 + Div. 2)",
+    1449,
+    -41,
+    null
+   ],
+   [
+    "2025-10-10",
+    "Codeforces Round 1057 (Div. 2)",
+    1461,
+    12,
+    null
+   ],
+   [
+    "2025-11-28",
+    "Educational Codeforces Round 185 (Rated for Div. 2)",
+    1515,
+    54,
+    null
+   ],
+   [
+    "2025-12-11",
+    "Codeforces Round 1070 (Div. 2)",
+    1479,
+    -36,
+    null
+   ],
+   [
+    "2025-12-19",
+    "Codeforces Global Round 31 (Div. 1 + Div. 2)",
+    1421,
+    -58,
+    null
+   ],
+   [
+    "2025-12-27",
+    "Good Bye 2025",
+    1463,
+    42,
+    null
+   ],
+   [
+    "2026-04-25",
+    "Spectral::Cup 2026 Round 1 (Codeforces Round 1094, Div. 1 + Div. 2)",
+    1498,
+    35,
+    null
+   ],
+   [
+    "2026-05-23",
+    "Spectral::Cup 2026 Round 2 (Codeforces Round 1100, Div. 1 + Div. 2)",
+    1509,
+    11,
+    null
+   ],
+   [
+    "2026-06-27",
+    "Codeforces Round 1105 (Div. 2)",
+    1407,
+    -102,
+    null
+   ],
+   [
+    "2026-07-12",
+    "Codeforces Round 1108 (Div. 2)",
+    1369,
+    -38,
+    null
+   ],
+   [
+    "2026-09-21",
+    "Codeforces Round 1122 (Div. 3)",
+    1335,
+    -34,
+    null
+   ]
+  ],
+  "daily": {
+   "2026-10-19": 3,
+   "2026-10-14": 1,
+   "2026-10-13": 1,
+   "2026-10-12": 1,
+   "2026-10-11": 4,
+   "2026-10-10": 2,
+   "2026-10-09": 1,
+   "2026-10-07": 2,
+   "2026-10-06": 1,
+   "2026-10-05": 1,
+   "2026-10-03": 1,
+   "2026-10-01": 1,
+   "2026-09-29": 1,
+   "2026-09-28": 1,
+   "2026-09-24": 2,
+   "2026-09-21": 4,
+   "2026-09-20": 1,
+   "2026-09-19": 1,
+   "2026-09-10": 1,
+   "2026-09-09": 3,
+   "2026-09-08": 2,
+   "2026-09-07": 1,
+   "2026-09-06": 4,
+   "2026-09-05": 2,
+   "2026-09-02": 1,
+   "2026-08-29": 1,
+   "2026-08-28": 1,
+   "2026-08-14": 1,
+   "2026-08-03": 3,
+   "2026-08-02": 3,
+   "2026-08-01": 1,
+   "2026-07-31": 3,
+   "2026-07-29": 1,
+   "2026-07-25": 1,
+   "2026-07-20": 1,
+   "2026-07-12": 2,
+   "2026-07-10": 1,
+   "2026-06-27": 1,
+   "2026-06-10": 1,
+   "2026-06-09": 4,
+   "2026-05-25": 1,
+   "2026-05-24": 1,
+   "2026-05-23": 4,
+   "2026-05-21": 2,
+   "2026-05-13": 1,
+   "2026-04-25": 3,
+   "2026-04-22": 2,
+   "2026-04-21": 1,
+   "2026-04-20": 3,
+   "2026-04-17": 7,
+   "2026-04-16": 4,
+   "2026-04-12": 3,
+   "2026-04-11": 4,
+   "2026-04-08": 3,
+   "2026-03-10": 1,
+   "2026-03-07": 1,
+   "2026-03-06": 1,
+   "2026-03-05": 1,
+   "2026-03-04": 4,
+   "2026-03-02": 1,
+   "2026-01-15": 1,
+   "2026-01-12": 1,
+   "2026-01-09": 1,
+   "2026-01-08": 3,
+   "2026-01-07": 1,
+   "2025-12-29": 3,
+   "2025-12-27": 8,
+   "2025-12-25": 4,
+   "2025-12-21": 1,
+   "2025-12-20": 1,
+   "2025-12-19": 2,
+   "2025-12-16": 1,
+   "2025-12-15": 1,
+   "2025-12-14": 1,
+   "2025-12-13": 5,
+   "2025-12-12": 2,
+   "2025-12-11": 5,
+   "2025-12-10": 1,
+   "2025-12-09": 1,
+   "2025-12-04": 2,
+   "2025-11-28": 3,
+   "2025-11-26": 1,
+   "2025-11-25": 2,
+   "2025-11-22": 2,
+   "2025-11-16": 2,
+   "2025-11-15": 2,
+   "2025-11-13": 1,
+   "2025-11-11": 3,
+   "2025-11-09": 1,
+   "2025-11-07": 2,
+   "2025-11-06": 1,
+   "2025-11-03": 2,
+   "2025-11-01": 2,
+   "2025-10-31": 3,
+   "2025-10-30": 3,
+   "2025-10-20": 1,
+   "2025-10-19": 1,
+   "2025-10-16": 1,
+   "2025-10-10": 5,
+   "2025-10-09": 2,
+   "2025-10-07": 1,
+   "2025-10-03": 2,
+   "2025-09-28": 4,
+   "2025-09-26": 1,
+   "2025-09-19": 4,
+   "2025-09-17": 3,
+   "2025-09-18": 3,
+   "2025-09-16": 1
+  },
+  "tags": {
+   "math": 206,
+   "number theory": 64,
+   "implementation": 125,
+   "strings": 34,
+   "greedy": 246,
+   "constructive algorithms": 118,
+   "two pointers": 45,
+   "hashing": 10,
+   "dp": 139,
+   "binary search": 77,
+   "brute force": 112,
+   "data structures": 79,
+   "geometry": 10,
+   "dfs and similar": 67,
+   "shortest paths": 16,
+   "graphs": 65,
+   "trees": 43,
+   "divide and conquer": 13,
+   "dsu": 22,
+   "sortings": 67,
+   "games": 18,
+   "interactive": 17,
+   "*special": 1,
+   "ternary search": 2,
+   "combinatorics": 34,
+   "communication": 3,
+   "bitmasks": 55,
+   "schedules": 3,
+   "graph matchings": 8,
+   "chinese remainder theorem": 2,
+   "probabilities": 6,
+   "2-sat": 1,
+   "flows": 3,
+   "matrices": 1
+  },
+  "ratings": {
+   "800": 75,
+   "900": 16,
+   "1000": 15,
+   "1100": 20,
+   "1200": 24,
+   "1300": 23,
+   "1400": 28,
+   "1500": 26,
+   "1600": 46,
+   "1700": 72,
+   "1800": 81,
+   "1900": 41,
+   "2000": 12,
+   "2100": 9,
+   "2200": 3,
+   "2300": 3,
+   "2400": 1
+  },
+  "recent": [
+   {
+    "name": "2276C Subarrays",
+    "url": "https://codeforces.com/contest/2276/problem/C",
+    "rating": null,
+    "tags": [
+     "math",
+     "number theory"
+    ],
+    "date": "2026-10-19"
+   },
+   {
+    "name": "2276B Replace and Compress",
+    "url": "https://codeforces.com/contest/2276/problem/B",
+    "rating": null,
+    "tags": [
+     "implementation",
+     "strings"
+    ],
+    "date": "2026-10-19"
+   },
+   {
+    "name": "2276A Perfect Sandwiches",
+    "url": "https://codeforces.com/contest/2276/problem/A",
+    "rating": null,
+    "tags": [
+     "greedy",
+     "math"
+    ],
+    "date": "2026-10-19"
+   },
+   {
+    "name": "2269C K Is Important",
+    "url": "https://codeforces.com/contest/2269/problem/C",
+    "rating": 1200,
+    "tags": [
+     "constructive algorithms",
+     "greedy",
+     "two pointers"
+    ],
+    "date": "2026-10-14"
+   },
+   {
+    "name": "2275F Tea Blend",
+    "url": "https://codeforces.com/contest/2275/problem/F",
+    "rating": null,
+    "tags": [
+     "hashing",
+     "math",
+     "number theory"
+    ],
+    "date": "2026-10-13"
+   },
+   {
+    "name": "2275E Repentance Is Already on the Way",
+    "url": "https://codeforces.com/contest/2275/problem/E",
+    "rating": null,
+    "tags": [
+     "dp",
+     "implementation"
+    ],
+    "date": "2026-10-12"
+   },
+   {
+    "name": "2275D Precision Alignment",
+    "url": "https://codeforces.com/contest/2275/problem/D",
+    "rating": null,
+    "tags": [
+     "binary search",
+     "brute force",
+     "greedy",
+     "implementation"
+    ],
+    "date": "2026-10-11"
+   },
+   {
+    "name": "2275C Unrequited Love",
+    "url": "https://codeforces.com/contest/2275/problem/C",
+    "rating": null,
+    "tags": [
+     "brute force",
+     "data structures"
+    ],
+    "date": "2026-10-11"
+   },
+   {
+    "name": "2275B Did Not Go to Print",
+    "url": "https://codeforces.com/contest/2275/problem/B",
+    "rating": null,
+    "tags": [
+     "data structures",
+     "implementation"
+    ],
+    "date": "2026-10-11"
+   },
+   {
+    "name": "2275A In Search of Convenience",
+    "url": "https://codeforces.com/contest/2275/problem/A",
+    "rating": null,
+    "tags": [
+     "geometry",
+     "implementation"
+    ],
+    "date": "2026-10-11"
+   },
+   {
+    "name": "173B Chamber of Secrets",
+    "url": "https://codeforces.com/contest/173/problem/B",
+    "rating": 1800,
+    "tags": [
+     "dfs and similar",
+     "shortest paths"
+    ],
+    "date": "2026-10-10"
+   },
+   {
+    "name": "590C Three States",
+    "url": "https://codeforces.com/contest/590/problem/C",
+    "rating": 2200,
+    "tags": [
+     "dfs and similar",
+     "graphs",
+     "shortest paths"
+    ],
+    "date": "2026-10-10"
+   },
+   {
+    "name": "877D Olya and Energy Drinks",
+    "url": "https://codeforces.com/contest/877/problem/D",
+    "rating": 2100,
+    "tags": [
+     "data structures",
+     "dfs and similar",
+     "graphs",
+     "shortest paths"
+    ],
+    "date": "2026-10-09"
+   },
+   {
+    "name": "1187E Tree Painting",
+    "url": "https://codeforces.com/contest/1187/problem/E",
+    "rating": 2100,
+    "tags": [
+     "dfs and similar",
+     "dp",
+     "trees"
+    ],
+    "date": "2026-10-07"
+   },
+   {
+    "name": "1528A Parsa's Humongous Tree",
+    "url": "https://codeforces.com/contest/1528/problem/A",
+    "rating": 1600,
+    "tags": [
+     "dfs and similar",
+     "divide and conquer",
+     "dp",
+     "greedy",
+     "trees"
+    ],
+    "date": "2026-10-07"
+   },
+   {
+    "name": "161D Distance in Tree",
+    "url": "https://codeforces.com/contest/161/problem/D",
+    "rating": 1800,
+    "tags": [
+     "dfs and similar",
+     "dp",
+     "trees"
+    ],
+    "date": "2026-10-06"
+   },
+   {
+    "name": "1689C Infected Tree",
+    "url": "https://codeforces.com/contest/1689/problem/C",
+    "rating": 1600,
+    "tags": [
+     "dfs and similar",
+     "dp",
+     "trees"
+    ],
+    "date": "2026-10-05"
+   },
+   {
+    "name": "860D Wizard's Tour",
+    "url": "https://codeforces.com/contest/860/problem/D",
+    "rating": 2300,
+    "tags": [
+     "dfs and similar",
+     "graphs",
+     "greedy"
+    ],
+    "date": "2026-10-03"
+   },
+   {
+    "name": "104536F Minimize the Diameter",
+    "url": "https://codeforces.com/gym/104536/problem/F",
+    "rating": null,
+    "tags": [],
+    "date": "2026-10-01"
+   },
+   {
+    "name": "1365D Solve The Maze",
+    "url": "https://codeforces.com/contest/1365/problem/D",
+    "rating": 1700,
+    "tags": [
+     "constructive algorithms",
+     "dfs and similar",
+     "dsu",
+     "graphs",
+     "greedy",
+     "implementation",
+     "shortest paths"
+    ],
+    "date": "2026-09-29"
+   },
+   {
+    "name": "2266F MEX Replacement",
+    "url": "https://codeforces.com/contest/2266/problem/F",
+    "rating": 2000,
+    "tags": [
+     "binary search",
+     "brute force",
+     "greedy",
+     "implementation",
+     "math",
+     "sortings"
+    ],
+    "date": "2026-09-28"
+   },
+   {
+    "name": "2266E Prime Destruction",
+    "url": "https://codeforces.com/contest/2266/problem/E",
+    "rating": 1400,
+    "tags": [
+     "brute force",
+     "dp",
+     "math",
+     "number theory"
+    ],
+    "date": "2026-09-24"
+   },
+   {
+    "name": "2266D Falling Concrete",
+    "url": "https://codeforces.com/contest/2266/problem/D",
+    "rating": 1400,
+    "tags": [
+     "constructive algorithms",
+     "data structures",
+     "math",
+     "sortings"
+    ],
+    "date": "2026-09-24"
+   },
+   {
+    "name": "2266C AND, OR, Sort!",
+    "url": "https://codeforces.com/contest/2266/problem/C",
+    "rating": 1000,
+    "tags": [
+     "greedy",
+     "strings"
+    ],
+    "date": "2026-09-21"
+   },
+   {
+    "name": "2266B Three Piles",
+    "url": "https://codeforces.com/contest/2266/problem/B",
+    "rating": 800,
+    "tags": [
+     "games",
+     "greedy",
+     "math"
+    ],
+    "date": "2026-09-21"
+   },
+   {
+    "name": "2266A Good Contest",
+    "url": "https://codeforces.com/contest/2266/problem/A",
+    "rating": 800,
+    "tags": [
+     "greedy"
+    ],
+    "date": "2026-09-21"
+   },
+   {
+    "name": "1991E Coloring Game",
+    "url": "https://codeforces.com/contest/1991/problem/E",
+    "rating": 1900,
+    "tags": [
+     "constructive algorithms",
+     "dfs and similar",
+     "games",
+     "graphs",
+     "greedy",
+     "interactive"
+    ],
+    "date": "2026-09-21"
+   },
+   {
+    "name": "1387A Graph",
+    "url": "https://codeforces.com/contest/1387/problem/A",
+    "rating": 2100,
+    "tags": [
+     "*special",
+     "binary search",
+     "dfs and similar",
+     "dp",
+     "math",
+     "ternary search"
+    ],
+    "date": "2026-09-20"
+   },
+   {
+    "name": "862B Mahmoud and Ehab and the bipartiteness",
+    "url": "https://codeforces.com/contest/862/problem/B",
+    "rating": 1300,
+    "tags": [
+     "dfs and similar",
+     "graphs",
+     "trees"
+    ],
+    "date": "2026-09-19"
+   },
+   {
+    "name": "2168B Locate",
+    "url": "https://codeforces.com/contest/2168/problem/B",
+    "rating": null,
+    "tags": [
+     "binary search",
+     "combinatorics",
+     "communication",
+     "constructive algorithms",
+     "greedy",
+     "interactive"
+    ],
+    "date": "2026-09-10"
+   },
+   {
+    "name": "2168A1 Encode and Decode (Easy Version)",
+    "url": "https://codeforces.com/contest/2168/problem/A1",
+    "rating": null,
+    "tags": [
+     "communication",
+     "constructive algorithms",
+     "interactive"
+    ],
+    "date": "2026-09-09"
+   },
+   {
+    "name": "2168A2 Encode and Decode (Hard Version)",
+    "url": "https://codeforces.com/contest/2168/problem/A2",
+    "rating": null,
+    "tags": [
+     "bitmasks",
+     "communication",
+     "interactive",
+     "math"
+    ],
+    "date": "2026-09-09"
+   },
+   {
+    "name": "2161D Locked Out",
+    "url": "https://codeforces.com/contest/2161/problem/D",
+    "rating": 2100,
+    "tags": [
+     "binary search",
+     "data structures",
+     "dp",
+     "greedy"
+    ],
+    "date": "2026-09-09"
+   },
+   {
+    "name": "2161C Loyalty",
+    "url": "https://codeforces.com/contest/2161/problem/C",
+    "rating": 1200,
+    "tags": [
+     "constructive algorithms",
+     "greedy",
+     "sortings",
+     "two pointers"
+    ],
+    "date": "2026-09-08"
+   },
+   {
+    "name": "2162E Beautiful Palindromes",
+    "url": "https://codeforces.com/contest/2162/problem/E",
+    "rating": 1600,
+    "tags": [
+     "constructive algorithms",
+     "greedy",
+     "schedules"
+    ],
+    "date": "2026-09-08"
+   },
+   {
+    "name": "2162D Beautiful Permutation",
+    "url": "https://codeforces.com/contest/2162/problem/D",
+    "rating": 1400,
+    "tags": [
+     "binary search",
+     "interactive"
+    ],
+    "date": "2026-09-07"
+   },
+   {
+    "name": "2162C Beautiful XOR",
+    "url": "https://codeforces.com/contest/2162/problem/C",
+    "rating": 1100,
+    "tags": [
+     "bitmasks",
+     "constructive algorithms",
+     "greedy"
+    ],
+    "date": "2026-09-06"
+   },
+   {
+    "name": "2162B Beautiful String",
+    "url": "https://codeforces.com/contest/2162/problem/B",
+    "rating": 1000,
+    "tags": [
+     "brute force",
+     "constructive algorithms"
+    ],
+    "date": "2026-09-06"
+   },
+   {
+    "name": "2162A Beautiful Average",
+    "url": "https://codeforces.com/contest/2162/problem/A",
+    "rating": 800,
+    "tags": [
+     "brute force",
+     "greedy"
+    ],
+    "date": "2026-09-06"
+   },
+   {
+    "name": "1541B Pleasant Pairs",
+    "url": "https://codeforces.com/contest/1541/problem/B",
+    "rating": 1200,
+    "tags": [
+     "brute force",
+     "implementation",
+     "math",
+     "number theory"
+    ],
+    "date": "2026-09-06"
+   }
+  ]
  },
  "ac": {
   "ok": true,
+  "fetchedAt": "2026-10-20T04:48:51.059Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
   "rank": 25906,
-  "solved": null,
+  "solved": 128,
   "history": [
    [
     "2023-09-09",
     "ABC319",
     2,
     null,
-    35
+    -568
    ],
    [
     "2024-01-06",
     "ABC335",
     7,
     5,
-    52
+    -416
    ],
    [
     "2024-03-09",
     "ABC344",
     11,
     4,
-    43
+    -484
    ],
    [
     "2024-03-16",
@@ -75,7 +887,7 @@
     "ARC175",
     184,
     19,
-    334
+    329
    ],
    [
     "2024-05-04",
@@ -89,7 +901,7 @@
     "ABC353",
     186,
     -45,
-    35
+    -564
    ],
    [
     "2024-05-18",
@@ -117,7 +929,7 @@
     "ABC383",
     370,
     -82,
-    47
+    -452
    ],
    [
     "2025-02-01",
@@ -159,21 +971,21 @@
     "ABC400",
     662,
     -92,
-    37
+    -551
    ],
    [
     "2025-05-10",
     "ABC405",
     577,
     -85,
-    38
+    -533
    ],
    [
     "2025-08-09",
     "ABC418",
     498,
     -79,
-    44
+    -477
    ],
    [
     "2025-08-16",
@@ -194,7 +1006,7 @@
     "ABC423",
     695,
     -76,
-    74
+    -271
    ],
    [
     "2025-10-11",
@@ -215,14 +1027,14 @@
     "ABC443",
     740,
     -84,
-    44
+    -476
    ],
    [
     "2026-02-07",
     "ABC444",
     661,
     -79,
-    52
+    -410
    ],
    [
     "2026-03-07",
@@ -236,7 +1048,7 @@
     "ABC462",
     633,
     -78,
-    46
+    -461
    ],
    [
     "2026-07-25",
@@ -246,7 +1058,429 @@
     1116
    ]
   ],
-  "daily": {},
-  "recent": []
+  "daily": {
+   "2025-10-11": 4,
+   "2025-12-20": 5,
+   "2026-03-07": 4,
+   "2026-03-08": 1,
+   "2026-04-18": 2,
+   "2026-07-25": 4,
+   "2026-10-07": 1
+  },
+  "recent": [
+   {
+    "name": "DP_V",
+    "url": "https://atcoder.jp/contests/dp/tasks/dp_v",
+    "rating": null,
+    "tags": [],
+    "date": "2026-10-07"
+   },
+   {
+    "name": "ABC468_D",
+    "url": "https://atcoder.jp/contests/abc468/tasks/abc468_d",
+    "rating": null,
+    "tags": [],
+    "date": "2026-07-25"
+   },
+   {
+    "name": "ABC468_C",
+    "url": "https://atcoder.jp/contests/abc468/tasks/abc468_c",
+    "rating": null,
+    "tags": [],
+    "date": "2026-07-25"
+   },
+   {
+    "name": "ABC468_B",
+    "url": "https://atcoder.jp/contests/abc468/tasks/abc468_b",
+    "rating": null,
+    "tags": [],
+    "date": "2026-07-25"
+   },
+   {
+    "name": "ABC468_A",
+    "url": "https://atcoder.jp/contests/abc468/tasks/abc468_a",
+    "rating": null,
+    "tags": [],
+    "date": "2026-07-25"
+   },
+   {
+    "name": "DP_G",
+    "url": "https://atcoder.jp/contests/dp/tasks/dp_g",
+    "rating": null,
+    "tags": [],
+    "date": "2026-04-18"
+   },
+   {
+    "name": "DP_H",
+    "url": "https://atcoder.jp/contests/dp/tasks/dp_h",
+    "rating": null,
+    "tags": [],
+    "date": "2026-04-18"
+   },
+   {
+    "name": "ABC448_E",
+    "url": "https://atcoder.jp/contests/abc448/tasks/abc448_e",
+    "rating": null,
+    "tags": [],
+    "date": "2026-03-08"
+   },
+   {
+    "name": "ABC448_D",
+    "url": "https://atcoder.jp/contests/abc448/tasks/abc448_d",
+    "rating": null,
+    "tags": [],
+    "date": "2026-03-07"
+   },
+   {
+    "name": "ABC448_C",
+    "url": "https://atcoder.jp/contests/abc448/tasks/abc448_c",
+    "rating": null,
+    "tags": [],
+    "date": "2026-03-07"
+   },
+   {
+    "name": "ABC448_B",
+    "url": "https://atcoder.jp/contests/abc448/tasks/abc448_b",
+    "rating": null,
+    "tags": [],
+    "date": "2026-03-07"
+   },
+   {
+    "name": "ABC448_A",
+    "url": "https://atcoder.jp/contests/abc448/tasks/abc448_a",
+    "rating": null,
+    "tags": [],
+    "date": "2026-03-07"
+   },
+   {
+    "name": "ABC437_E",
+    "url": "https://atcoder.jp/contests/abc437/tasks/abc437_e",
+    "rating": null,
+    "tags": [],
+    "date": "2025-12-20"
+   },
+   {
+    "name": "ABC437_D",
+    "url": "https://atcoder.jp/contests/abc437/tasks/abc437_d",
+    "rating": null,
+    "tags": [],
+    "date": "2025-12-20"
+   },
+   {
+    "name": "ABC437_C",
+    "url": "https://atcoder.jp/contests/abc437/tasks/abc437_c",
+    "rating": null,
+    "tags": [],
+    "date": "2025-12-20"
+   },
+   {
+    "name": "ABC437_B",
+    "url": "https://atcoder.jp/contests/abc437/tasks/abc437_b",
+    "rating": null,
+    "tags": [],
+    "date": "2025-12-20"
+   },
+   {
+    "name": "ABC437_A",
+    "url": "https://atcoder.jp/contests/abc437/tasks/abc437_a",
+    "rating": null,
+    "tags": [],
+    "date": "2025-12-20"
+   },
+   {
+    "name": "ABC427_C",
+    "url": "https://atcoder.jp/contests/abc427/tasks/abc427_c",
+    "rating": null,
+    "tags": [],
+    "date": "2025-10-11"
+   },
+   {
+    "name": "ABC427_B",
+    "url": "https://atcoder.jp/contests/abc427/tasks/abc427_b",
+    "rating": null,
+    "tags": [],
+    "date": "2025-10-11"
+   },
+   {
+    "name": "ABC427_D",
+    "url": "https://atcoder.jp/contests/abc427/tasks/abc427_d",
+    "rating": null,
+    "tags": [],
+    "date": "2025-10-11"
+   },
+   {
+    "name": "ABC427_A",
+    "url": "https://atcoder.jp/contests/abc427/tasks/abc427_a",
+    "rating": null,
+    "tags": [],
+    "date": "2025-10-11"
+   },
+   {
+    "name": "ABC421_C",
+    "url": "https://atcoder.jp/contests/abc421/tasks/abc421_c",
+    "rating": null,
+    "tags": [],
+    "date": "2025-08-30"
+   },
+   {
+    "name": "ABC421_B",
+    "url": "https://atcoder.jp/contests/abc421/tasks/abc421_b",
+    "rating": null,
+    "tags": [],
+    "date": "2025-08-30"
+   },
+   {
+    "name": "ABC421_E",
+    "url": "https://atcoder.jp/contests/abc421/tasks/abc421_e",
+    "rating": null,
+    "tags": [],
+    "date": "2025-08-30"
+   },
+   {
+    "name": "ABC421_A",
+    "url": "https://atcoder.jp/contests/abc421/tasks/abc421_a",
+    "rating": null,
+    "tags": [],
+    "date": "2025-08-30"
+   },
+   {
+    "name": "ABC419_E",
+    "url": "https://atcoder.jp/contests/abc419/tasks/abc419_e",
+    "rating": null,
+    "tags": [],
+    "date": "2025-08-19"
+   },
+   {
+    "name": "ABC419_C",
+    "url": "https://atcoder.jp/contests/abc419/tasks/abc419_c",
+    "rating": null,
+    "tags": [],
+    "date": "2025-08-16"
+   },
+   {
+    "name": "ABC419_B",
+    "url": "https://atcoder.jp/contests/abc419/tasks/abc419_b",
+    "rating": null,
+    "tags": [],
+    "date": "2025-08-16"
+   },
+   {
+    "name": "ABC419_D",
+    "url": "https://atcoder.jp/contests/abc419/tasks/abc419_d",
+    "rating": null,
+    "tags": [],
+    "date": "2025-08-16"
+   },
+   {
+    "name": "ABC419_A",
+    "url": "https://atcoder.jp/contests/abc419/tasks/abc419_a",
+    "rating": null,
+    "tags": [],
+    "date": "2025-08-16"
+   },
+   {
+    "name": "ABC402_D",
+    "url": "https://atcoder.jp/contests/abc402/tasks/abc402_d",
+    "rating": null,
+    "tags": [],
+    "date": "2025-04-29"
+   },
+   {
+    "name": "ABC402_C",
+    "url": "https://atcoder.jp/contests/abc402/tasks/abc402_c",
+    "rating": null,
+    "tags": [],
+    "date": "2025-04-29"
+   },
+   {
+    "name": "ABC402_B",
+    "url": "https://atcoder.jp/contests/abc402/tasks/abc402_b",
+    "rating": null,
+    "tags": [],
+    "date": "2025-04-29"
+   },
+   {
+    "name": "ABC402_A",
+    "url": "https://atcoder.jp/contests/abc402/tasks/abc402_a",
+    "rating": null,
+    "tags": [],
+    "date": "2025-04-29"
+   },
+   {
+    "name": "ABC401_F",
+    "url": "https://atcoder.jp/contests/abc401/tasks/abc401_f",
+    "rating": null,
+    "tags": [],
+    "date": "2025-04-14"
+   },
+   {
+    "name": "ABC401_E",
+    "url": "https://atcoder.jp/contests/abc401/tasks/abc401_e",
+    "rating": null,
+    "tags": [],
+    "date": "2025-04-13"
+   },
+   {
+    "name": "ABC401_D",
+    "url": "https://atcoder.jp/contests/abc401/tasks/abc401_d",
+    "rating": null,
+    "tags": [],
+    "date": "2025-04-13"
+   },
+   {
+    "name": "ABC401_C",
+    "url": "https://atcoder.jp/contests/abc401/tasks/abc401_c",
+    "rating": null,
+    "tags": [],
+    "date": "2025-04-13"
+   },
+   {
+    "name": "ABC401_B",
+    "url": "https://atcoder.jp/contests/abc401/tasks/abc401_b",
+    "rating": null,
+    "tags": [],
+    "date": "2025-04-13"
+   },
+   {
+    "name": "ABC401_A",
+    "url": "https://atcoder.jp/contests/abc401/tasks/abc401_a",
+    "rating": null,
+    "tags": [],
+    "date": "2025-04-13"
+   }
+  ]
+ },
+ "cc": {
+  "ok": true,
+  "fetchedAt": "2026-10-20T04:48:51.183Z",
+  "handle": "doctorowl",
+  "rating": 1942,
+  "max": 2007,
+  "stars": null,
+  "global": 1640,
+  "country": 1353,
+  "contests": 17,
+  "solved": 95,
+  "history": [
+   [
+    "2024-02-28",
+    "Starters 123 Division 4 (Rated)",
+    1433,
+    null,
+    null
+   ],
+   [
+    "2024-03-20",
+    "Starters 126 Division 3 (Rated)",
+    1729,
+    296,
+    null
+   ],
+   [
+    "2024-03-27",
+    "Starters 127 Division 3",
+    1887,
+    158,
+    null
+   ],
+   [
+    "2024-04-17",
+    "Starters 130 Division 2 (Rated)",
+    1839,
+    -48,
+    null
+   ],
+   [
+    "2024-05-08",
+    "Starters 133 Division 2 (Rated)",
+    1948,
+    109,
+    null
+   ],
+   [
+    "2024-05-22",
+    "Starters 135 Division 2 (Rated)",
+    1991,
+    43,
+    null
+   ],
+   [
+    "2024-05-29",
+    "Starters 136 Division 2 ( Rated )",
+    1954,
+    -37,
+    null
+   ],
+   [
+    "2024-06-12",
+    "Starters 138 Division 2 (Rated)",
+    1921,
+    -33,
+    null
+   ],
+   [
+    "2024-06-19",
+    "Starters 139 Division 2 (Rated)",
+    1917,
+    -4,
+    null
+   ],
+   [
+    "2024-07-10",
+    "Starters 142 Division 2 (Rated)",
+    1885,
+    -32,
+    null
+   ],
+   [
+    "2024-07-17",
+    "Starters 143 Division 2 (Rated)",
+    1948,
+    63,
+    null
+   ],
+   [
+    "2024-07-24",
+    "Starters 144 Division 2 (Rated)",
+    2007,
+    59,
+    null
+   ],
+   [
+    "2025-02-12",
+    "Starters 173 (Rated upto < 2700)",
+    1954,
+    -53,
+    null
+   ],
+   [
+    "2025-07-23",
+    "Starters 196 (Rated)",
+    1949,
+    -5,
+    null
+   ],
+   [
+    "2025-10-29",
+    "Starters 210 (Rated)",
+    1950,
+    1,
+    null
+   ],
+   [
+    "2025-12-03",
+    "Starters 215 (Rated)",
+    1972,
+    22,
+    null
+   ],
+   [
+    "2026-04-15",
+    "Starters 234 (Rated)",
+    1942,
+    -30,
+    null
+   ]
+  ]
  }
 }
