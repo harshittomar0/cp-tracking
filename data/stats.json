@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-20T04:50:52.864Z",
+ "updated": "2026-10-20T11:44:18.859Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-20T04:50:58.438Z",
+  "fetchedAt": "2026-10-20T11:44:24.292Z",
   "handle": "Squittal",
   "rating": 1335,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 521,
+  "solved": 524,
   "history": [
    [
     "2024-11-30",
@@ -223,6 +223,7 @@
    ]
   ],
   "daily": {
+   "2026-10-20": 3,
    "2026-10-19": 3,
    "2026-10-14": 1,
    "2026-10-13": 1,
@@ -333,11 +334,13 @@
    "2025-09-16": 1
   },
   "tags": {
-   "math": 206,
+   "games": 20,
+   "math": 209,
+   "bitmasks": 56,
+   "greedy": 247,
    "number theory": 64,
    "implementation": 125,
    "strings": 34,
-   "greedy": 246,
    "constructive algorithms": 118,
    "two pointers": 45,
    "hashing": 10,
@@ -353,13 +356,11 @@
    "divide and conquer": 13,
    "dsu": 22,
    "sortings": 67,
-   "games": 18,
    "interactive": 17,
    "*special": 1,
    "ternary search": 2,
    "combinatorics": 34,
    "communication": 3,
-   "bitmasks": 55,
    "schedules": 3,
    "graph matchings": 8,
    "chinese remainder theorem": 2,
@@ -369,17 +370,17 @@
    "matrices": 1
   },
   "ratings": {
-   "800": 75,
+   "800": 79,
    "900": 16,
-   "1000": 15,
-   "1100": 20,
+   "1000": 18,
+   "1100": 22,
    "1200": 24,
-   "1300": 23,
+   "1300": 24,
    "1400": 28,
-   "1500": 26,
+   "1500": 27,
    "1600": 46,
    "1700": 72,
-   "1800": 81,
+   "1800": 82,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -389,9 +390,40 @@
   },
   "recent": [
    {
+    "name": "2261C I Know About a Million Things",
+    "url": "https://codeforces.com/contest/2261/problem/C",
+    "rating": 1000,
+    "tags": [
+     "games",
+     "math"
+    ],
+    "date": "2026-10-20"
+   },
+   {
+    "name": "2261B What's the Capital of France?",
+    "url": "https://codeforces.com/contest/2261/problem/B",
+    "rating": 1100,
+    "tags": [
+     "bitmasks",
+     "greedy",
+     "math"
+    ],
+    "date": "2026-10-20"
+   },
+   {
+    "name": "2261A Hey, It's Me, Souvlakity",
+    "url": "https://codeforces.com/contest/2261/problem/A",
+    "rating": 800,
+    "tags": [
+     "games",
+     "math"
+    ],
+    "date": "2026-10-20"
+   },
+   {
     "name": "2276C Subarrays",
     "url": "https://codeforces.com/contest/2276/problem/C",
-    "rating": null,
+    "rating": 1100,
     "tags": [
      "math",
      "number theory"
@@ -401,7 +433,7 @@
    {
     "name": "2276B Replace and Compress",
     "url": "https://codeforces.com/contest/2276/problem/B",
-    "rating": null,
+    "rating": 1000,
     "tags": [
      "implementation",
      "strings"
@@ -411,7 +443,7 @@
    {
     "name": "2276A Perfect Sandwiches",
     "url": "https://codeforces.com/contest/2276/problem/A",
-    "rating": null,
+    "rating": 800,
     "tags": [
      "greedy",
      "math"
@@ -432,7 +464,7 @@
    {
     "name": "2275F Tea Blend",
     "url": "https://codeforces.com/contest/2275/problem/F",
-    "rating": null,
+    "rating": 1800,
     "tags": [
      "hashing",
      "math",
@@ -443,7 +475,7 @@
    {
     "name": "2275E Repentance Is Already on the Way",
     "url": "https://codeforces.com/contest/2275/problem/E",
-    "rating": null,
+    "rating": 1500,
     "tags": [
      "dp",
      "implementation"
@@ -453,7 +485,7 @@
    {
     "name": "2275D Precision Alignment",
     "url": "https://codeforces.com/contest/2275/problem/D",
-    "rating": null,
+    "rating": 1300,
     "tags": [
      "binary search",
      "brute force",
@@ -465,7 +497,7 @@
    {
     "name": "2275C Unrequited Love",
     "url": "https://codeforces.com/contest/2275/problem/C",
-    "rating": null,
+    "rating": 1000,
     "tags": [
      "brute force",
      "data structures"
@@ -475,7 +507,7 @@
    {
     "name": "2275B Did Not Go to Print",
     "url": "https://codeforces.com/contest/2275/problem/B",
-    "rating": null,
+    "rating": 800,
     "tags": [
      "data structures",
      "implementation"
@@ -485,7 +517,7 @@
    {
     "name": "2275A In Search of Convenience",
     "url": "https://codeforces.com/contest/2275/problem/A",
-    "rating": null,
+    "rating": 800,
     "tags": [
      "geometry",
      "implementation"
@@ -803,44 +835,12 @@
      "greedy"
     ],
     "date": "2026-09-06"
-   },
-   {
-    "name": "2162B Beautiful String",
-    "url": "https://codeforces.com/contest/2162/problem/B",
-    "rating": 1000,
-    "tags": [
-     "brute force",
-     "constructive algorithms"
-    ],
-    "date": "2026-09-06"
-   },
-   {
-    "name": "2162A Beautiful Average",
-    "url": "https://codeforces.com/contest/2162/problem/A",
-    "rating": 800,
-    "tags": [
-     "brute force",
-     "greedy"
-    ],
-    "date": "2026-09-06"
-   },
-   {
-    "name": "1541B Pleasant Pairs",
-    "url": "https://codeforces.com/contest/1541/problem/B",
-    "rating": 1200,
-    "tags": [
-     "brute force",
-     "implementation",
-     "math",
-     "number theory"
-    ],
-    "date": "2026-09-06"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-20T04:51:02.072Z",
+  "fetchedAt": "2026-10-20T11:44:28.139Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1352,7 +1352,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-20T04:51:02.371Z",
+  "fetchedAt": "2026-10-20T11:44:28.327Z",
   "handle": "doctorowl",
   "rating": 1942,
   "max": 2007,
