@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-20T11:44:18.859Z",
+ "updated": "2026-10-20T17:13:09.869Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-20T11:44:24.292Z",
+  "fetchedAt": "2026-10-20T17:13:15.578Z",
   "handle": "Squittal",
   "rating": 1335,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 524,
+  "solved": 525,
   "history": [
    [
     "2024-11-30",
@@ -223,7 +223,7 @@
    ]
   ],
   "daily": {
-   "2026-10-20": 3,
+   "2026-10-20": 4,
    "2026-10-19": 3,
    "2026-10-14": 1,
    "2026-10-13": 1,
@@ -334,14 +334,14 @@
    "2025-09-16": 1
   },
   "tags": {
+   "constructive algorithms": 119,
+   "math": 210,
    "games": 20,
-   "math": 209,
    "bitmasks": 56,
    "greedy": 247,
    "number theory": 64,
    "implementation": 125,
    "strings": 34,
-   "constructive algorithms": 118,
    "two pointers": 45,
    "hashing": 10,
    "dp": 139,
@@ -375,7 +375,7 @@
    "1000": 18,
    "1100": 22,
    "1200": 24,
-   "1300": 24,
+   "1300": 25,
    "1400": 28,
    "1500": 27,
    "1600": 46,
@@ -389,6 +389,16 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "2261D1 Come Be My Friend, Don't Be So Scared (Easy Version)",
+    "url": "https://codeforces.com/contest/2261/problem/D1",
+    "rating": 1300,
+    "tags": [
+     "constructive algorithms",
+     "math"
+    ],
+    "date": "2026-10-20"
+   },
    {
     "name": "2261C I Know About a Million Things",
     "url": "https://codeforces.com/contest/2261/problem/C",
@@ -824,23 +834,12 @@
      "interactive"
     ],
     "date": "2026-09-07"
-   },
-   {
-    "name": "2162C Beautiful XOR",
-    "url": "https://codeforces.com/contest/2162/problem/C",
-    "rating": 1100,
-    "tags": [
-     "bitmasks",
-     "constructive algorithms",
-     "greedy"
-    ],
-    "date": "2026-09-06"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-20T11:44:28.139Z",
+  "fetchedAt": "2026-10-20T17:13:19.580Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1352,7 +1351,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-20T11:44:28.327Z",
+  "fetchedAt": "2026-10-20T17:13:20.157Z",
   "handle": "doctorowl",
   "rating": 1942,
   "max": 2007,
