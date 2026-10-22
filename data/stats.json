@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-21T21:46:24.344Z",
+ "updated": "2026-10-22T04:54:45.821Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-21T21:46:30.450Z",
+  "fetchedAt": "2026-10-22T04:54:51.004Z",
   "handle": "Squittal",
   "rating": 1335,
   "maxRating": 1603,
@@ -337,10 +337,10 @@
    "combinatorics": 35,
    "graphs": 66,
    "constructive algorithms": 119,
+   "greedy": 248,
    "math": 210,
    "games": 20,
    "bitmasks": 56,
-   "greedy": 247,
    "number theory": 64,
    "implementation": 125,
    "strings": 34,
@@ -405,6 +405,7 @@
     "rating": 1300,
     "tags": [
      "constructive algorithms",
+     "greedy",
      "math"
     ],
     "date": "2026-10-20"
@@ -839,7 +840,7 @@
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-21T21:46:34.781Z",
+  "fetchedAt": "2026-10-22T04:54:54.866Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1350,15 +1351,15 @@
   ]
  },
  "cc": {
-  "ok": false,
-  "fetchedAt": "2026-10-21T17:16:31.145Z",
+  "ok": true,
+  "fetchedAt": "2026-10-22T04:54:55.020Z",
   "handle": "doctorowl",
-  "rating": 1942,
+  "rating": 1902,
   "max": 2007,
   "stars": null,
-  "global": 1640,
-  "country": 1353,
-  "contests": 17,
+  "global": 2037,
+  "country": 1719,
+  "contests": 18,
   "solved": 99,
   "history": [
    [
@@ -1479,8 +1480,14 @@
     1942,
     -30,
     null
+   ],
+   [
+    "2026-10-21",
+    "Starters 261 (Rated)",
+    1902,
+    -40,
+    null
    ]
-  ],
-  "error": "HTTP 403 from www.codechef.com/users/doctorowl"
+  ]
  }
 }
