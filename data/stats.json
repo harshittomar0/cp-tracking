@@ -1,9 +1,9 @@
 {
- "updated": "2026-10-22T04:54:45.821Z",
+ "updated": "2026-10-22T11:58:55.196Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-22T04:54:51.004Z",
+  "fetchedAt": "2026-10-22T11:59:01.514Z",
   "handle": "Squittal",
   "rating": 1335,
   "maxRating": 1603,
@@ -210,15 +210,8 @@
    [
     "2026-07-12",
     "Codeforces Round 1108 (Div. 2)",
-    1369,
-    -38,
-    null
-   ],
-   [
-    "2026-09-21",
-    "Codeforces Round 1122 (Div. 3)",
     1335,
-    -34,
+    -72,
     null
    ]
   ],
@@ -840,7 +833,7 @@
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-22T04:54:54.866Z",
+  "fetchedAt": "2026-10-22T11:59:05.509Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1352,7 +1345,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-22T04:54:55.020Z",
+  "fetchedAt": "2026-10-22T11:59:05.767Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
