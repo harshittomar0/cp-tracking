@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-24T16:00:02.144Z",
+ "updated": "2026-10-24T20:53:37.224Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-24T16:00:07.868Z",
+  "fetchedAt": "2026-10-24T20:53:42.682Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 528,
+  "solved": 529,
   "history": [
    [
     "2024-11-30",
@@ -223,7 +223,7 @@
    ]
   ],
   "daily": {
-   "2026-10-24": 2,
+   "2026-10-24": 3,
    "2026-10-21": 1,
    "2026-10-20": 4,
    "2026-10-19": 3,
@@ -329,11 +329,10 @@
    "2025-10-07": 1,
    "2025-10-03": 2,
    "2025-09-28": 4,
-   "2025-09-26": 1,
-   "2025-09-19": 4
+   "2025-09-26": 1
   },
   "tags": {
-   "dp": 141,
+   "dp": 142,
    "flows": 4,
    "graph matchings": 9,
    "greedy": 249,
@@ -379,7 +378,7 @@
    "1500": 27,
    "1600": 46,
    "1700": 72,
-   "1800": 84,
+   "1800": 85,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -388,6 +387,15 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "983B XOR-pyramid",
+    "url": "https://codeforces.com/contest/983/problem/B",
+    "rating": 1800,
+    "tags": [
+     "dp"
+    ],
+    "date": "2026-10-24"
+   },
    {
     "name": "1525D Armchairs",
     "url": "https://codeforces.com/contest/1525/problem/D",
@@ -823,24 +831,12 @@
      "math"
     ],
     "date": "2026-09-09"
-   },
-   {
-    "name": "2161D Locked Out",
-    "url": "https://codeforces.com/contest/2161/problem/D",
-    "rating": 2100,
-    "tags": [
-     "binary search",
-     "data structures",
-     "dp",
-     "greedy"
-    ],
-    "date": "2026-09-09"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-24T16:00:11.526Z",
+  "fetchedAt": "2026-10-24T20:53:46.429Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1352,7 +1348,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-24T16:00:11.844Z",
+  "fetchedAt": "2026-10-24T20:53:46.801Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
