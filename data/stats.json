@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-24T11:07:33.128Z",
+ "updated": "2026-10-24T16:00:02.144Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-24T11:07:45.255Z",
+  "fetchedAt": "2026-10-24T16:00:07.868Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 527,
+  "solved": 528,
   "history": [
    [
     "2024-11-30",
@@ -223,7 +223,7 @@
    ]
   ],
   "daily": {
-   "2026-10-24": 1,
+   "2026-10-24": 2,
    "2026-10-21": 1,
    "2026-10-20": 4,
    "2026-10-19": 3,
@@ -333,13 +333,15 @@
    "2025-09-19": 4
   },
   "tags": {
+   "dp": 141,
+   "flows": 4,
+   "graph matchings": 9,
+   "greedy": 249,
    "dfs and similar": 68,
-   "dp": 140,
    "graphs": 67,
    "trees": 44,
    "combinatorics": 35,
    "constructive algorithms": 119,
-   "greedy": 248,
    "math": 210,
    "games": 20,
    "bitmasks": 56,
@@ -361,11 +363,9 @@
    "ternary search": 2,
    "communication": 3,
    "schedules": 3,
-   "graph matchings": 8,
    "chinese remainder theorem": 2,
    "probabilities": 6,
    "2-sat": 1,
-   "flows": 3,
    "matrices": 1
   },
   "ratings": {
@@ -379,7 +379,7 @@
    "1500": 27,
    "1600": 46,
    "1700": 72,
-   "1800": 83,
+   "1800": 84,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -388,6 +388,18 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "1525D Armchairs",
+    "url": "https://codeforces.com/contest/1525/problem/D",
+    "rating": 1800,
+    "tags": [
+     "dp",
+     "flows",
+     "graph matchings",
+     "greedy"
+    ],
+    "date": "2026-10-24"
+   },
    {
     "name": "700B Connecting Universities",
     "url": "https://codeforces.com/contest/700/problem/B",
@@ -823,28 +835,16 @@
      "greedy"
     ],
     "date": "2026-09-09"
-   },
-   {
-    "name": "2161C Loyalty",
-    "url": "https://codeforces.com/contest/2161/problem/C",
-    "rating": 1200,
-    "tags": [
-     "constructive algorithms",
-     "greedy",
-     "sortings",
-     "two pointers"
-    ],
-    "date": "2026-09-08"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-24T11:07:49.454Z",
+  "fetchedAt": "2026-10-24T16:00:11.526Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
-  "rank": 25906,
+  "rank": 25880,
   "solved": 128,
   "history": [
    [
@@ -1352,7 +1352,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-24T11:07:49.839Z",
+  "fetchedAt": "2026-10-24T16:00:11.844Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
