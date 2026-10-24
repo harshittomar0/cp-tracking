@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-24T04:42:03.687Z",
+ "updated": "2026-10-24T11:07:33.128Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-24T04:42:09.074Z",
+  "fetchedAt": "2026-10-24T11:07:45.255Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 526,
+  "solved": 527,
   "history": [
    [
     "2024-11-30",
@@ -223,6 +223,7 @@
    ]
   ],
   "daily": {
+   "2026-10-24": 1,
    "2026-10-21": 1,
    "2026-10-20": 4,
    "2026-10-19": 3,
@@ -332,8 +333,11 @@
    "2025-09-19": 4
   },
   "tags": {
+   "dfs and similar": 68,
+   "dp": 140,
+   "graphs": 67,
+   "trees": 44,
    "combinatorics": 35,
-   "graphs": 66,
    "constructive algorithms": 119,
    "greedy": 248,
    "math": 210,
@@ -344,14 +348,11 @@
    "strings": 34,
    "two pointers": 45,
    "hashing": 10,
-   "dp": 139,
    "binary search": 77,
    "brute force": 112,
    "data structures": 79,
    "geometry": 10,
-   "dfs and similar": 67,
    "shortest paths": 16,
-   "trees": 43,
    "divide and conquer": 13,
    "dsu": 22,
    "sortings": 67,
@@ -378,7 +379,7 @@
    "1500": 27,
    "1600": 46,
    "1700": 72,
-   "1800": 82,
+   "1800": 83,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -387,6 +388,18 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "700B Connecting Universities",
+    "url": "https://codeforces.com/contest/700/problem/B",
+    "rating": 1800,
+    "tags": [
+     "dfs and similar",
+     "dp",
+     "graphs",
+     "trees"
+    ],
+    "date": "2026-10-24"
+   },
    {
     "name": "2276D Caveman",
     "url": "https://codeforces.com/contest/2276/problem/D",
@@ -822,23 +835,12 @@
      "two pointers"
     ],
     "date": "2026-09-08"
-   },
-   {
-    "name": "2162E Beautiful Palindromes",
-    "url": "https://codeforces.com/contest/2162/problem/E",
-    "rating": 1600,
-    "tags": [
-     "constructive algorithms",
-     "greedy",
-     "schedules"
-    ],
-    "date": "2026-09-08"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-24T04:42:13.195Z",
+  "fetchedAt": "2026-10-24T11:07:49.454Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1350,7 +1352,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-24T04:42:13.605Z",
+  "fetchedAt": "2026-10-24T11:07:49.839Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
