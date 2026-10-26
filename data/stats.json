@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-26T04:53:08.579Z",
+ "updated": "2026-10-26T13:10:12.288Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-26T04:53:14.065Z",
+  "fetchedAt": "2026-10-26T13:10:17.664Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 529,
+  "solved": 530,
   "history": [
    [
     "2024-11-30",
@@ -223,6 +223,7 @@
    ]
   ],
   "daily": {
+   "2026-10-26": 1,
    "2026-10-24": 3,
    "2026-10-21": 1,
    "2026-10-20": 4,
@@ -332,6 +333,8 @@
    "2025-09-26": 1
   },
   "tags": {
+   "math": 211,
+   "number theory": 65,
    "dp": 142,
    "flows": 4,
    "graph matchings": 9,
@@ -341,10 +344,8 @@
    "trees": 44,
    "combinatorics": 35,
    "constructive algorithms": 119,
-   "math": 210,
    "games": 20,
    "bitmasks": 56,
-   "number theory": 64,
    "implementation": 125,
    "strings": 34,
    "two pointers": 45,
@@ -378,7 +379,7 @@
    "1500": 27,
    "1600": 46,
    "1700": 72,
-   "1800": 85,
+   "1800": 86,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -387,6 +388,16 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "1295D Same GCDs",
+    "url": "https://codeforces.com/contest/1295/problem/D",
+    "rating": 1800,
+    "tags": [
+     "math",
+     "number theory"
+    ],
+    "date": "2026-10-26"
+   },
    {
     "name": "983B XOR-pyramid",
     "url": "https://codeforces.com/contest/983/problem/B",
@@ -819,24 +830,12 @@
      "interactive"
     ],
     "date": "2026-09-09"
-   },
-   {
-    "name": "2168A2 Encode and Decode (Hard Version)",
-    "url": "https://codeforces.com/contest/2168/problem/A2",
-    "rating": null,
-    "tags": [
-     "bitmasks",
-     "communication",
-     "interactive",
-     "math"
-    ],
-    "date": "2026-09-09"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-26T04:53:17.862Z",
+  "fetchedAt": "2026-10-26T13:10:21.688Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1348,7 +1347,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-26T04:53:18.245Z",
+  "fetchedAt": "2026-10-26T13:10:22.024Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
