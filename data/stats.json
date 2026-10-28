@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-28T05:48:04.321Z",
+ "updated": "2026-10-28T13:01:37.653Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-28T05:48:10.023Z",
+  "fetchedAt": "2026-10-28T13:01:43.386Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 530,
+  "solved": 531,
   "history": [
    [
     "2024-11-30",
@@ -223,6 +223,7 @@
    ]
   ],
   "daily": {
+   "2026-10-28": 1,
    "2026-10-26": 1,
    "2026-10-24": 3,
    "2026-10-21": 1,
@@ -333,7 +334,12 @@
    "2025-09-26": 1
   },
   "tags": {
-   "math": 211,
+   "*special": 2,
+   "data structures": 80,
+   "dsu": 23,
+   "implementation": 126,
+   "math": 212,
+   "sortings": 68,
    "number theory": 65,
    "dp": 142,
    "flows": 4,
@@ -346,20 +352,15 @@
    "constructive algorithms": 119,
    "games": 20,
    "bitmasks": 56,
-   "implementation": 125,
    "strings": 34,
    "two pointers": 45,
    "hashing": 10,
    "binary search": 77,
    "brute force": 112,
-   "data structures": 79,
    "geometry": 10,
    "shortest paths": 16,
    "divide and conquer": 13,
-   "dsu": 22,
-   "sortings": 67,
    "interactive": 17,
-   "*special": 1,
    "ternary search": 2,
    "communication": 3,
    "schedules": 3,
@@ -379,7 +380,7 @@
    "1500": 27,
    "1600": 46,
    "1700": 72,
-   "1800": 86,
+   "1800": 87,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -388,6 +389,20 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "1402A Fancy Fence",
+    "url": "https://codeforces.com/contest/1402/problem/A",
+    "rating": 1800,
+    "tags": [
+     "*special",
+     "data structures",
+     "dsu",
+     "implementation",
+     "math",
+     "sortings"
+    ],
+    "date": "2026-10-28"
+   },
    {
     "name": "1295D Same GCDs",
     "url": "https://codeforces.com/contest/1295/problem/D",
@@ -819,23 +834,12 @@
      "interactive"
     ],
     "date": "2026-09-10"
-   },
-   {
-    "name": "2168A1 Encode and Decode (Easy Version)",
-    "url": "https://codeforces.com/contest/2168/problem/A1",
-    "rating": null,
-    "tags": [
-     "communication",
-     "constructive algorithms",
-     "interactive"
-    ],
-    "date": "2026-09-09"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-28T05:48:14.047Z",
+  "fetchedAt": "2026-10-28T13:01:47.319Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1347,13 +1351,13 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-28T05:48:14.351Z",
+  "fetchedAt": "2026-10-28T13:01:47.607Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
   "stars": null,
-  "global": 1996,
-  "country": 1683,
+  "global": 2037,
+  "country": 1719,
   "contests": 18,
   "solved": 99,
   "history": [
