@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-28T22:38:34.744Z",
+ "updated": "2026-10-29T05:53:03.238Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-28T22:38:40.066Z",
+  "fetchedAt": "2026-10-29T05:53:08.684Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 531,
+  "solved": 532,
   "history": [
    [
     "2024-11-30",
@@ -223,6 +223,7 @@
    ]
   ],
   "daily": {
+   "2026-10-29": 1,
    "2026-10-28": 1,
    "2026-10-26": 1,
    "2026-10-24": 3,
@@ -334,6 +335,7 @@
    "2025-09-26": 1
   },
   "tags": {
+   "greedy": 250,
    "*special": 2,
    "data structures": 80,
    "dsu": 23,
@@ -344,7 +346,6 @@
    "dp": 142,
    "flows": 4,
    "graph matchings": 9,
-   "greedy": 249,
    "dfs and similar": 68,
    "graphs": 67,
    "trees": 44,
@@ -380,7 +381,7 @@
    "1500": 27,
    "1600": 46,
    "1700": 72,
-   "1800": 87,
+   "1800": 88,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -389,6 +390,15 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "478C Table Decorations",
+    "url": "https://codeforces.com/contest/478/problem/C",
+    "rating": 1800,
+    "tags": [
+     "greedy"
+    ],
+    "date": "2026-10-29"
+   },
    {
     "name": "1402A Fancy Fence",
     "url": "https://codeforces.com/contest/1402/problem/A",
@@ -820,26 +830,12 @@
      "trees"
     ],
     "date": "2026-09-19"
-   },
-   {
-    "name": "2168B Locate",
-    "url": "https://codeforces.com/contest/2168/problem/B",
-    "rating": null,
-    "tags": [
-     "binary search",
-     "combinatorics",
-     "communication",
-     "constructive algorithms",
-     "greedy",
-     "interactive"
-    ],
-    "date": "2026-09-10"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-28T22:38:44.234Z",
+  "fetchedAt": "2026-10-29T05:53:12.731Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1351,7 +1347,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-28T22:38:44.647Z",
+  "fetchedAt": "2026-10-29T05:53:13.200Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
