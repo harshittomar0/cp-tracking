@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-29T05:53:03.238Z",
+ "updated": "2026-10-29T13:08:58.048Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-29T05:53:08.684Z",
+  "fetchedAt": "2026-10-29T13:09:03.754Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 532,
+  "solved": 534,
   "history": [
    [
     "2024-11-30",
@@ -223,7 +223,7 @@
    ]
   ],
   "daily": {
-   "2026-10-29": 1,
+   "2026-10-29": 3,
    "2026-10-28": 1,
    "2026-10-26": 1,
    "2026-10-24": 3,
@@ -335,7 +335,9 @@
    "2025-09-26": 1
   },
   "tags": {
-   "greedy": 250,
+   "binary search": 79,
+   "greedy": 251,
+   "dp": 143,
    "*special": 2,
    "data structures": 80,
    "dsu": 23,
@@ -343,7 +345,6 @@
    "math": 212,
    "sortings": 68,
    "number theory": 65,
-   "dp": 142,
    "flows": 4,
    "graph matchings": 9,
    "dfs and similar": 68,
@@ -356,7 +357,6 @@
    "strings": 34,
    "two pointers": 45,
    "hashing": 10,
-   "binary search": 77,
    "brute force": 112,
    "geometry": 10,
    "shortest paths": 16,
@@ -381,7 +381,7 @@
    "1500": 27,
    "1600": 46,
    "1700": 72,
-   "1800": 88,
+   "1800": 90,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -390,6 +390,26 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "1250J The Parade",
+    "url": "https://codeforces.com/contest/1250/problem/J",
+    "rating": 1800,
+    "tags": [
+     "binary search",
+     "greedy"
+    ],
+    "date": "2026-10-29"
+   },
+   {
+    "name": "847E Packmen",
+    "url": "https://codeforces.com/contest/847/problem/E",
+    "rating": 1800,
+    "tags": [
+     "binary search",
+     "dp"
+    ],
+    "date": "2026-10-29"
+   },
    {
     "name": "478C Table Decorations",
     "url": "https://codeforces.com/contest/478/problem/C",
@@ -805,37 +825,12 @@
      "interactive"
     ],
     "date": "2026-09-21"
-   },
-   {
-    "name": "1387A Graph",
-    "url": "https://codeforces.com/contest/1387/problem/A",
-    "rating": 2100,
-    "tags": [
-     "*special",
-     "binary search",
-     "dfs and similar",
-     "dp",
-     "math",
-     "ternary search"
-    ],
-    "date": "2026-09-20"
-   },
-   {
-    "name": "862B Mahmoud and Ehab and the bipartiteness",
-    "url": "https://codeforces.com/contest/862/problem/B",
-    "rating": 1300,
-    "tags": [
-     "dfs and similar",
-     "graphs",
-     "trees"
-    ],
-    "date": "2026-09-19"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-29T05:53:12.731Z",
+  "fetchedAt": "2026-10-29T13:09:07.841Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1347,7 +1342,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-29T05:53:13.200Z",
+  "fetchedAt": "2026-10-29T13:09:08.241Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
