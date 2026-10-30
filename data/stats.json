@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-30T13:01:25.029Z",
+ "updated": "2026-10-30T22:25:41.880Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-30T13:01:30.684Z",
+  "fetchedAt": "2026-10-30T22:25:47.320Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 536,
+  "solved": 537,
   "history": [
    [
     "2024-11-30",
@@ -223,7 +223,7 @@
    ]
   ],
   "daily": {
-   "2026-10-30": 2,
+   "2026-10-30": 3,
    "2026-10-29": 3,
    "2026-10-28": 1,
    "2026-10-26": 1,
@@ -336,22 +336,23 @@
    "2025-09-26": 1
   },
   "tags": {
+   "constructive algorithms": 121,
+   "data structures": 81,
+   "divide and conquer": 14,
+   "greedy": 253,
+   "math": 213,
+   "sortings": 69,
    "binary search": 80,
    "interactive": 18,
    "ternary search": 3,
-   "constructive algorithms": 120,
    "dfs and similar": 69,
    "games": 21,
    "graphs": 68,
-   "greedy": 252,
    "trees": 45,
    "dp": 143,
    "*special": 2,
-   "data structures": 80,
    "dsu": 23,
    "implementation": 126,
-   "math": 212,
-   "sortings": 68,
    "number theory": 65,
    "flows": 4,
    "graph matchings": 9,
@@ -363,7 +364,6 @@
    "brute force": 112,
    "geometry": 10,
    "shortest paths": 16,
-   "divide and conquer": 13,
    "communication": 3,
    "schedules": 3,
    "chinese remainder theorem": 2,
@@ -381,7 +381,7 @@
    "1400": 29,
    "1500": 27,
    "1600": 46,
-   "1700": 74,
+   "1700": 75,
    "1800": 90,
    "1900": 41,
    "2000": 12,
@@ -391,6 +391,20 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "1983D Swap Dilemma",
+    "url": "https://codeforces.com/contest/1983/problem/D",
+    "rating": 1700,
+    "tags": [
+     "constructive algorithms",
+     "data structures",
+     "divide and conquer",
+     "greedy",
+     "math",
+     "sortings"
+    ],
+    "date": "2026-10-30"
+   },
    {
     "name": "1999G2 Ruler (hard version)",
     "url": "https://codeforces.com/contest/1999/problem/G2",
@@ -817,23 +831,12 @@
      "strings"
     ],
     "date": "2026-09-21"
-   },
-   {
-    "name": "2266B Three Piles",
-    "url": "https://codeforces.com/contest/2266/problem/B",
-    "rating": 800,
-    "tags": [
-     "games",
-     "greedy",
-     "math"
-    ],
-    "date": "2026-09-21"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-30T13:01:34.276Z",
+  "fetchedAt": "2026-10-30T22:25:51.131Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1345,7 +1348,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-30T13:01:34.577Z",
+  "fetchedAt": "2026-10-30T22:25:51.560Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
