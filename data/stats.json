@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-30T05:54:40.171Z",
+ "updated": "2026-10-30T13:01:25.029Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-30T05:54:45.456Z",
+  "fetchedAt": "2026-10-30T13:01:30.684Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 534,
+  "solved": 536,
   "history": [
    [
     "2024-11-30",
@@ -223,6 +223,7 @@
    ]
   ],
   "daily": {
+   "2026-10-30": 2,
    "2026-10-29": 3,
    "2026-10-28": 1,
    "2026-10-26": 1,
@@ -335,8 +336,15 @@
    "2025-09-26": 1
   },
   "tags": {
-   "binary search": 79,
-   "greedy": 251,
+   "binary search": 80,
+   "interactive": 18,
+   "ternary search": 3,
+   "constructive algorithms": 120,
+   "dfs and similar": 69,
+   "games": 21,
+   "graphs": 68,
+   "greedy": 252,
+   "trees": 45,
    "dp": 143,
    "*special": 2,
    "data structures": 80,
@@ -347,12 +355,7 @@
    "number theory": 65,
    "flows": 4,
    "graph matchings": 9,
-   "dfs and similar": 68,
-   "graphs": 67,
-   "trees": 44,
    "combinatorics": 35,
-   "constructive algorithms": 119,
-   "games": 20,
    "bitmasks": 56,
    "strings": 34,
    "two pointers": 45,
@@ -361,8 +364,6 @@
    "geometry": 10,
    "shortest paths": 16,
    "divide and conquer": 13,
-   "interactive": 17,
-   "ternary search": 2,
    "communication": 3,
    "schedules": 3,
    "chinese remainder theorem": 2,
@@ -380,7 +381,7 @@
    "1400": 29,
    "1500": 27,
    "1600": 46,
-   "1700": 72,
+   "1700": 74,
    "1800": 90,
    "1900": 41,
    "2000": 12,
@@ -390,6 +391,31 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "1999G2 Ruler (hard version)",
+    "url": "https://codeforces.com/contest/1999/problem/G2",
+    "rating": 1700,
+    "tags": [
+     "binary search",
+     "interactive",
+     "ternary search"
+    ],
+    "date": "2026-10-30"
+   },
+   {
+    "name": "2006A Iris and Game on the Tree",
+    "url": "https://codeforces.com/contest/2006/problem/A",
+    "rating": 1700,
+    "tags": [
+     "constructive algorithms",
+     "dfs and similar",
+     "games",
+     "graphs",
+     "greedy",
+     "trees"
+    ],
+    "date": "2026-10-30"
+   },
    {
     "name": "1250J The Parade",
     "url": "https://codeforces.com/contest/1250/problem/J",
@@ -802,35 +828,12 @@
      "math"
     ],
     "date": "2026-09-21"
-   },
-   {
-    "name": "2266A Good Contest",
-    "url": "https://codeforces.com/contest/2266/problem/A",
-    "rating": 800,
-    "tags": [
-     "greedy"
-    ],
-    "date": "2026-09-21"
-   },
-   {
-    "name": "1991E Coloring Game",
-    "url": "https://codeforces.com/contest/1991/problem/E",
-    "rating": 1900,
-    "tags": [
-     "constructive algorithms",
-     "dfs and similar",
-     "games",
-     "graphs",
-     "greedy",
-     "interactive"
-    ],
-    "date": "2026-09-21"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-30T05:54:49.515Z",
+  "fetchedAt": "2026-10-30T13:01:34.276Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1342,7 +1345,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-30T05:54:50.015Z",
+  "fetchedAt": "2026-10-30T13:01:34.577Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
