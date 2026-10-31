@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-31T05:50:36.192Z",
+ "updated": "2026-10-31T12:39:39.481Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-31T05:50:41.526Z",
+  "fetchedAt": "2026-10-31T12:39:44.747Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 537,
+  "solved": 540,
   "history": [
    [
     "2024-11-30",
@@ -223,6 +223,7 @@
    ]
   ],
   "daily": {
+   "2026-10-31": 3,
    "2026-10-30": 3,
    "2026-10-29": 3,
    "2026-10-28": 1,
@@ -336,30 +337,30 @@
    "2025-09-26": 1
   },
   "tags": {
-   "constructive algorithms": 121,
+   "binary search": 82,
+   "interactive": 19,
+   "bitmasks": 57,
+   "constructive algorithms": 122,
+   "dfs and similar": 70,
+   "greedy": 254,
+   "math": 215,
+   "trees": 46,
+   "implementation": 127,
+   "two pointers": 46,
    "data structures": 81,
    "divide and conquer": 14,
-   "greedy": 253,
-   "math": 213,
    "sortings": 69,
-   "binary search": 80,
-   "interactive": 18,
    "ternary search": 3,
-   "dfs and similar": 69,
    "games": 21,
    "graphs": 68,
-   "trees": 45,
    "dp": 143,
    "*special": 2,
    "dsu": 23,
-   "implementation": 126,
    "number theory": 65,
    "flows": 4,
    "graph matchings": 9,
    "combinatorics": 35,
-   "bitmasks": 56,
    "strings": 34,
-   "two pointers": 45,
    "hashing": 10,
    "brute force": 112,
    "geometry": 10,
@@ -379,10 +380,10 @@
    "1200": 24,
    "1300": 25,
    "1400": 29,
-   "1500": 27,
+   "1500": 28,
    "1600": 46,
    "1700": 75,
-   "1800": 90,
+   "1800": 92,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -391,6 +392,42 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "1999G1 Ruler (easy version)",
+    "url": "https://codeforces.com/contest/1999/problem/G1",
+    "rating": 1500,
+    "tags": [
+     "binary search",
+     "interactive"
+    ],
+    "date": "2026-10-31"
+   },
+   {
+    "name": "1338B Edge Weight Assignment",
+    "url": "https://codeforces.com/contest/1338/problem/B",
+    "rating": 1800,
+    "tags": [
+     "bitmasks",
+     "constructive algorithms",
+     "dfs and similar",
+     "greedy",
+     "math",
+     "trees"
+    ],
+    "date": "2026-10-31"
+   },
+   {
+    "name": "1355C Count Triangles",
+    "url": "https://codeforces.com/contest/1355/problem/C",
+    "rating": 1800,
+    "tags": [
+     "binary search",
+     "implementation",
+     "math",
+     "two pointers"
+    ],
+    "date": "2026-10-31"
+   },
    {
     "name": "1983D Swap Dilemma",
     "url": "https://codeforces.com/contest/1983/problem/D",
@@ -797,46 +834,12 @@
      "sortings"
     ],
     "date": "2026-09-28"
-   },
-   {
-    "name": "2266E Prime Destruction",
-    "url": "https://codeforces.com/contest/2266/problem/E",
-    "rating": 1400,
-    "tags": [
-     "brute force",
-     "dp",
-     "math",
-     "number theory"
-    ],
-    "date": "2026-09-24"
-   },
-   {
-    "name": "2266D Falling Concrete",
-    "url": "https://codeforces.com/contest/2266/problem/D",
-    "rating": 1400,
-    "tags": [
-     "constructive algorithms",
-     "data structures",
-     "math",
-     "sortings"
-    ],
-    "date": "2026-09-24"
-   },
-   {
-    "name": "2266C AND, OR, Sort!",
-    "url": "https://codeforces.com/contest/2266/problem/C",
-    "rating": 1000,
-    "tags": [
-     "greedy",
-     "strings"
-    ],
-    "date": "2026-09-21"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-31T05:50:45.213Z",
+  "fetchedAt": "2026-10-31T12:39:48.522Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1348,7 +1351,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-31T05:50:45.692Z",
+  "fetchedAt": "2026-10-31T12:39:48.914Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
