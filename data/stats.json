@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-01T06:12:59.225Z",
+ "updated": "2026-11-01T13:31:35.275Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-11-01T06:13:04.460Z",
+  "fetchedAt": "2026-11-01T13:31:40.824Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 543,
+  "solved": 545,
   "history": [
    [
     "2024-11-30",
@@ -223,7 +223,7 @@
    ]
   ],
   "daily": {
-   "2026-11-01": 1,
+   "2026-11-01": 3,
    "2026-10-31": 5,
    "2026-10-30": 3,
    "2026-10-29": 3,
@@ -337,25 +337,26 @@
    "2025-09-28": 4
   },
   "tags": {
+   "graphs": 70,
+   "greedy": 256,
+   "shortest paths": 17,
+   "constructive algorithms": 124,
+   "data structures": 85,
+   "dfs and similar": 71,
+   "trees": 47,
    "binary search": 84,
-   "constructive algorithms": 123,
-   "data structures": 84,
    "strings": 35,
    "two pointers": 49,
    "brute force": 114,
    "dp": 145,
    "interactive": 19,
    "bitmasks": 57,
-   "dfs and similar": 70,
-   "greedy": 254,
    "math": 215,
-   "trees": 46,
    "implementation": 127,
    "divide and conquer": 14,
    "sortings": 69,
    "ternary search": 3,
    "games": 21,
-   "graphs": 68,
    "*special": 2,
    "dsu": 23,
    "number theory": 65,
@@ -364,7 +365,6 @@
    "combinatorics": 35,
    "hashing": 10,
    "geometry": 10,
-   "shortest paths": 16,
    "communication": 3,
    "schedules": 3,
    "chinese remainder theorem": 2,
@@ -383,7 +383,7 @@
    "1500": 28,
    "1600": 46,
    "1700": 76,
-   "1800": 94,
+   "1800": 96,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -392,6 +392,31 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "1283D Christmas Trees",
+    "url": "https://codeforces.com/contest/1283/problem/D",
+    "rating": 1800,
+    "tags": [
+     "graphs",
+     "greedy",
+     "shortest paths"
+    ],
+    "date": "2026-11-01"
+   },
+   {
+    "name": "1286B Numbers on Tree",
+    "url": "https://codeforces.com/contest/1286/problem/B",
+    "rating": 1800,
+    "tags": [
+     "constructive algorithms",
+     "data structures",
+     "dfs and similar",
+     "graphs",
+     "greedy",
+     "trees"
+    ],
+    "date": "2026-11-01"
+   },
    {
     "name": "1290B Irreducible Anagrams",
     "url": "https://codeforces.com/contest/1290/problem/B",
@@ -814,34 +839,12 @@
      "trees"
     ],
     "date": "2026-10-06"
-   },
-   {
-    "name": "1689C Infected Tree",
-    "url": "https://codeforces.com/contest/1689/problem/C",
-    "rating": 1600,
-    "tags": [
-     "dfs and similar",
-     "dp",
-     "trees"
-    ],
-    "date": "2026-10-05"
-   },
-   {
-    "name": "860D Wizard's Tour",
-    "url": "https://codeforces.com/contest/860/problem/D",
-    "rating": 2300,
-    "tags": [
-     "dfs and similar",
-     "graphs",
-     "greedy"
-    ],
-    "date": "2026-10-03"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-11-01T06:13:09.213Z",
+  "fetchedAt": "2026-11-01T13:31:44.368Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1353,7 +1356,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-11-01T06:13:09.489Z",
+  "fetchedAt": "2026-11-01T13:31:44.760Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
