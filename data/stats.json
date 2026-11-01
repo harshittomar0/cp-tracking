@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-01T13:31:35.275Z",
+ "updated": "2026-11-01T22:06:01.897Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-11-01T13:31:40.824Z",
+  "fetchedAt": "2026-11-01T22:06:07.354Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 545,
+  "solved": 546,
   "history": [
    [
     "2024-11-30",
@@ -223,7 +223,7 @@
    ]
   ],
   "daily": {
-   "2026-11-01": 3,
+   "2026-11-01": 4,
    "2026-10-31": 5,
    "2026-10-30": 3,
    "2026-10-29": 3,
@@ -337,15 +337,15 @@
    "2025-09-28": 4
   },
   "tags": {
+   "data structures": 86,
+   "strings": 36,
+   "trees": 48,
    "graphs": 70,
    "greedy": 256,
    "shortest paths": 17,
    "constructive algorithms": 124,
-   "data structures": 85,
    "dfs and similar": 71,
-   "trees": 47,
    "binary search": 84,
-   "strings": 35,
    "two pointers": 49,
    "brute force": 114,
    "dp": 145,
@@ -384,7 +384,7 @@
    "1600": 46,
    "1700": 76,
    "1800": 96,
-   "1900": 41,
+   "1900": 42,
    "2000": 12,
    "2100": 9,
    "2200": 3,
@@ -392,6 +392,17 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "1902E Collapsing Strings",
+    "url": "https://codeforces.com/contest/1902/problem/E",
+    "rating": 1900,
+    "tags": [
+     "data structures",
+     "strings",
+     "trees"
+    ],
+    "date": "2026-11-01"
+   },
    {
     "name": "1283D Christmas Trees",
     "url": "https://codeforces.com/contest/1283/problem/D",
@@ -828,23 +839,12 @@
      "trees"
     ],
     "date": "2026-10-07"
-   },
-   {
-    "name": "161D Distance in Tree",
-    "url": "https://codeforces.com/contest/161/problem/D",
-    "rating": 1800,
-    "tags": [
-     "dfs and similar",
-     "dp",
-     "trees"
-    ],
-    "date": "2026-10-06"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-11-01T13:31:44.368Z",
+  "fetchedAt": "2026-11-01T22:06:12.555Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1356,7 +1356,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-11-01T13:31:44.760Z",
+  "fetchedAt": "2026-11-01T22:06:12.948Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
