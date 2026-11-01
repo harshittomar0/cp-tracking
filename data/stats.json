@@ -1,15 +1,15 @@
 {
- "updated": "2026-10-31T21:39:31.393Z",
+ "updated": "2026-11-01T06:12:59.225Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-10-31T21:39:36.970Z",
+  "fetchedAt": "2026-11-01T06:13:04.460Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 542,
+  "solved": 543,
   "history": [
    [
     "2024-11-30",
@@ -223,6 +223,7 @@
    ]
   ],
   "daily": {
+   "2026-11-01": 1,
    "2026-10-31": 5,
    "2026-10-30": 3,
    "2026-10-29": 3,
@@ -336,14 +337,15 @@
    "2025-09-28": 4
   },
   "tags": {
-   "binary search": 83,
+   "binary search": 84,
+   "constructive algorithms": 123,
+   "data structures": 84,
+   "strings": 35,
+   "two pointers": 49,
    "brute force": 114,
-   "data structures": 83,
    "dp": 145,
-   "two pointers": 48,
    "interactive": 19,
    "bitmasks": 57,
-   "constructive algorithms": 122,
    "dfs and similar": 70,
    "greedy": 254,
    "math": 215,
@@ -360,7 +362,6 @@
    "flows": 4,
    "graph matchings": 9,
    "combinatorics": 35,
-   "strings": 34,
    "hashing": 10,
    "geometry": 10,
    "shortest paths": 16,
@@ -382,7 +383,7 @@
    "1500": 28,
    "1600": 46,
    "1700": 76,
-   "1800": 93,
+   "1800": 94,
    "1900": 41,
    "2000": 12,
    "2100": 9,
@@ -391,6 +392,19 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "1290B Irreducible Anagrams",
+    "url": "https://codeforces.com/contest/1290/problem/B",
+    "rating": 1800,
+    "tags": [
+     "binary search",
+     "constructive algorithms",
+     "data structures",
+     "strings",
+     "two pointers"
+    ],
+    "date": "2026-11-01"
+   },
    {
     "name": "1335E1 Three Blocks Palindrome (easy version)",
     "url": "https://codeforces.com/contest/1335/problem/E1",
@@ -822,19 +836,12 @@
      "greedy"
     ],
     "date": "2026-10-03"
-   },
-   {
-    "name": "104536F Minimize the Diameter",
-    "url": "https://codeforces.com/gym/104536/problem/F",
-    "rating": null,
-    "tags": [],
-    "date": "2026-10-01"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-10-31T21:39:40.982Z",
+  "fetchedAt": "2026-11-01T06:13:09.213Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1346,7 +1353,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-10-31T21:39:41.734Z",
+  "fetchedAt": "2026-11-01T06:13:09.489Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
