@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-06T19:27:58.753Z",
+ "updated": "2026-11-07T06:04:09.293Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-11-06T19:28:04.292Z",
+  "fetchedAt": "2026-11-07T06:04:14.760Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 548,
+  "solved": 549,
   "history": [
    [
     "2024-11-30",
@@ -223,6 +223,7 @@
    ]
   ],
   "daily": {
+   "2026-11-07": 1,
    "2026-11-04": 1,
    "2026-11-02": 1,
    "2026-11-01": 4,
@@ -338,13 +339,14 @@
    "2025-10-03": 2
   },
   "tags": {
-   "constructive algorithms": 125,
-   "math": 217,
+   "bitmasks": 58,
+   "constructive algorithms": 126,
+   "graphs": 72,
+   "greedy": 258,
+   "math": 218,
    "binary search": 85,
    "data structures": 87,
    "dsu": 24,
-   "graphs": 71,
-   "greedy": 257,
    "sortings": 70,
    "ternary search": 4,
    "strings": 36,
@@ -355,7 +357,6 @@
    "brute force": 114,
    "dp": 145,
    "interactive": 19,
-   "bitmasks": 57,
    "implementation": 127,
    "divide and conquer": 14,
    "games": 21,
@@ -380,7 +381,7 @@
    "1100": 22,
    "1200": 24,
    "1300": 25,
-   "1400": 29,
+   "1400": 30,
    "1500": 28,
    "1600": 46,
    "1700": 76,
@@ -393,6 +394,19 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "2271C XOR Problem",
+    "url": "https://codeforces.com/contest/2271/problem/C",
+    "rating": 1400,
+    "tags": [
+     "bitmasks",
+     "constructive algorithms",
+     "graphs",
+     "greedy",
+     "math"
+    ],
+    "date": "2026-11-07"
+   },
    {
     "name": "2273B Robot Championship",
     "url": "https://codeforces.com/contest/2273/problem/B",
@@ -830,24 +844,12 @@
      "shortest paths"
     ],
     "date": "2026-10-10"
-   },
-   {
-    "name": "877D Olya and Energy Drinks",
-    "url": "https://codeforces.com/contest/877/problem/D",
-    "rating": 2100,
-    "tags": [
-     "data structures",
-     "dfs and similar",
-     "graphs",
-     "shortest paths"
-    ],
-    "date": "2026-10-09"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-11-06T19:28:08.105Z",
+  "fetchedAt": "2026-11-07T06:04:19.501Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1359,7 +1361,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-11-06T19:28:08.542Z",
+  "fetchedAt": "2026-11-07T06:04:20.042Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
