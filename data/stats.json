@@ -1,15 +1,15 @@
 {
- "updated": "2026-11-10T07:24:39.097Z",
+ "updated": "2026-11-10T19:46:46.694Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-11-10T07:24:44.481Z",
+  "fetchedAt": "2026-11-10T19:46:51.836Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
   "rank": "pupil",
   "maxRank": "expert",
-  "solved": 549,
+  "solved": 550,
   "history": [
    [
     "2024-11-30",
@@ -223,6 +223,7 @@
    ]
   ],
   "daily": {
+   "2026-11-10": 1,
    "2026-11-07": 1,
    "2026-11-04": 1,
    "2026-11-02": 1,
@@ -338,23 +339,23 @@
    "2025-10-07": 1
   },
   "tags": {
+   "constructive algorithms": 127,
+   "dp": 146,
+   "greedy": 259,
+   "sortings": 71,
+   "two pointers": 50,
    "bitmasks": 58,
-   "constructive algorithms": 126,
    "graphs": 72,
-   "greedy": 258,
    "math": 218,
    "binary search": 85,
    "data structures": 87,
    "dsu": 24,
-   "sortings": 70,
    "ternary search": 4,
    "strings": 36,
    "trees": 48,
    "shortest paths": 17,
    "dfs and similar": 71,
-   "two pointers": 49,
    "brute force": 114,
-   "dp": 145,
    "interactive": 19,
    "implementation": 127,
    "divide and conquer": 14,
@@ -380,7 +381,7 @@
    "1100": 22,
    "1200": 24,
    "1300": 25,
-   "1400": 30,
+   "1400": 31,
    "1500": 28,
    "1600": 46,
    "1700": 76,
@@ -393,6 +394,19 @@
    "2400": 1
   },
   "recent": [
+   {
+    "name": "2267D Backrooms Hill",
+    "url": "https://codeforces.com/contest/2267/problem/D",
+    "rating": 1400,
+    "tags": [
+     "constructive algorithms",
+     "dp",
+     "greedy",
+     "sortings",
+     "two pointers"
+    ],
+    "date": "2026-11-10"
+   },
    {
     "name": "2271C XOR Problem",
     "url": "https://codeforces.com/contest/2271/problem/C",
@@ -832,23 +846,12 @@
      "shortest paths"
     ],
     "date": "2026-10-10"
-   },
-   {
-    "name": "590C Three States",
-    "url": "https://codeforces.com/contest/590/problem/C",
-    "rating": 2200,
-    "tags": [
-     "dfs and similar",
-     "graphs",
-     "shortest paths"
-    ],
-    "date": "2026-10-10"
    }
   ]
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-11-10T07:24:48.421Z",
+  "fetchedAt": "2026-11-10T19:46:55.890Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1360,7 +1363,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-11-10T07:24:48.659Z",
+  "fetchedAt": "2026-11-10T19:46:56.218Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
