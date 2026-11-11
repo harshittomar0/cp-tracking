@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-11T06:31:47.760Z",
+ "updated": "2026-11-11T19:39:07.567Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-11-11T06:31:52.946Z",
+  "fetchedAt": "2026-11-11T19:39:13.014Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
@@ -335,8 +335,7 @@
    "2025-10-19": 1,
    "2025-10-16": 1,
    "2025-10-10": 5,
-   "2025-10-09": 2,
-   "2025-10-07": 1
+   "2025-10-09": 2
   },
   "tags": {
    "constructive algorithms": 127,
@@ -851,7 +850,7 @@
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-11-11T06:31:56.883Z",
+  "fetchedAt": "2026-11-11T19:39:16.837Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1363,13 +1362,13 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-11-11T06:31:57.529Z",
+  "fetchedAt": "2026-11-11T19:39:17.239Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
   "stars": null,
-  "global": 2000,
-  "country": 1686,
+  "global": 1990,
+  "country": 1680,
   "contests": 18,
   "solved": 99,
   "history": [
