@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-18T07:35:16.788Z",
+ "updated": "2026-11-18T20:36:57.968Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-11-18T07:35:21.904Z",
+  "fetchedAt": "2026-11-18T20:37:03.064Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
@@ -848,7 +848,7 @@
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-11-18T07:35:25.518Z",
+  "fetchedAt": "2026-11-18T20:37:07.128Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1359,13 +1359,13 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-11-18T07:35:25.877Z",
+  "fetchedAt": "2026-11-18T20:37:07.498Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
   "stars": null,
-  "global": 1990,
-  "country": 1680,
+  "global": 1976,
+  "country": 1679,
   "contests": 18,
   "solved": 99,
   "history": [
