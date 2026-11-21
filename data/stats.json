@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-21T07:15:43.645Z",
+ "updated": "2026-11-21T19:21:01.913Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-11-21T07:15:48.911Z",
+  "fetchedAt": "2026-11-21T19:21:07.235Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
@@ -847,11 +847,11 @@
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-11-21T07:15:52.756Z",
+  "fetchedAt": "2026-11-21T19:21:11.230Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
-  "rank": 25901,
+  "rank": 25854,
   "solved": 128,
   "history": [
    [
@@ -1358,7 +1358,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-11-21T07:15:53.203Z",
+  "fetchedAt": "2026-11-21T19:21:11.664Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
