@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-27T21:22:17.661Z",
+ "updated": "2026-11-28T07:54:48.555Z",
  "timezone": "Asia/Kolkata",
  "cf": {
   "ok": true,
-  "fetchedAt": "2026-11-27T21:22:22.838Z",
+  "fetchedAt": "2026-11-28T07:54:53.735Z",
   "handle": "Squittal",
   "rating": 1342,
   "maxRating": 1603,
@@ -845,7 +845,7 @@
  },
  "ac": {
   "ok": true,
-  "fetchedAt": "2026-11-27T21:22:26.415Z",
+  "fetchedAt": "2026-11-28T07:54:57.764Z",
   "handle": "drowl",
   "rating": 693,
   "max": 824,
@@ -1356,7 +1356,7 @@
  },
  "cc": {
   "ok": true,
-  "fetchedAt": "2026-11-27T21:22:26.626Z",
+  "fetchedAt": "2026-11-28T07:54:57.946Z",
   "handle": "doctorowl",
   "rating": 1902,
   "max": 2007,
